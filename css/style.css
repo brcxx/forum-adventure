@@ -275,20 +275,23 @@ select {
 .main-section {
   position: relative;
 }
+.main-section_preface {
+  margin-top: 600px;
+}
 .main-section_preface .main-scroll {
-  position: relative;
+  position: absolute;
   z-index: 10;
   background: url(../images/kv-scroll.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  width: 100%;
+  width: 660px;
   height: 850px;
-}
-.main-section_preface .main-scroll_text {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.main-section_preface .main-scroll_text {
+  padding: 240px 0;
   line-height: 2.5em;
   font-weight: 700;
   font-size: 24px;
@@ -297,6 +300,7 @@ select {
 }
 .main-section_card {
   position: relative;
+  margin-top: 600px;
 }
 .main-section_card::after {
   content: "";
@@ -313,12 +317,13 @@ select {
   transform: translate(-50%, -50%);
 }
 .main-section_card .card-game {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
-  width: 100%;
+  width: 848px;
   height: 686px;
-  max-width: 848px;
-  margin: auto;
   background: url(../images/bg-textrue.png);
   background-size: cover;
   background-position: center;
@@ -410,8 +415,8 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
-  min-height: 533px;
+  width: 600px;
+  height: 533px;
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
@@ -578,20 +583,27 @@ select {
   .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
     box-shadow: none;
   }
+  .main-section_preface {
+    margin-top: 55.5555555556vw;
+  }
   .main-section_preface .main-scroll {
+    width: 61.1111111111vw;
     height: 78.7037037037vw;
   }
   .main-section_preface .main-scroll_text {
+    padding: 22.2222222222vw 0;
     line-height: 5.5555555556vw;
     font-size: 2.2222222222vw;
+  }
+  .main-section_card {
+    margin-top: 58.3333333333vw;
   }
   .main-section_card::after {
     display: none;
   }
   .main-section .card-game {
+    width: 78.5185185185vw;
     height: auto;
-    min-height: 100%;
-    max-width: 78.5185185185vw;
     border-top: 1.3888888889vw solid #63410d;
     border-bottom: 1.3888888889vw solid #63410d;
     padding: 2.2222222222vw 0 4.6296296296vw 0;
@@ -634,8 +646,8 @@ select {
     margin-left: 0.7407407407vw;
   }
   .main-section .card-game .card-question {
-    max-width: 62.2222222222vw;
-    height: 92.5925925926vw;
+    width: 60.1851851852vw;
+    height: 77.1296296296vw;
   }
   .main-section .card-game .card-question_img {
     width: 55.5555555556vw;
@@ -644,7 +656,7 @@ select {
   }
   .main-section .card-game .card-question_text {
     padding: 0.7407407407vw 0;
-    font-size: 2.5925925926vw;
+    font-size: 2.2222222222vw;
   }
   .main-section .card-game .card-question_answer .answer {
     width: 48.4259259259vw;
@@ -680,9 +692,6 @@ select {
   }
 }
 @media screen and (max-width: 768px) {
-  .gap {
-    margin-top: 41.9270833333vw;
-  }
   .section-kv {
     min-height: 168.4895833333vw;
   }
@@ -779,16 +788,23 @@ select {
   .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
     box-shadow: none;
   }
+  .main-section_preface {
+    margin-top: 84.6354166667vw;
+  }
   .main-section_preface .main-scroll {
-    height: 123.6979166667vw;
+    width: 97.65625vw;
+    height: 130.2083333333vw;
   }
   .main-section_preface .main-scroll_text {
-    width: 71.6145833333vw;
-    line-height: 8.4635416667vw;
-    font-size: 3.90625vw;
+    padding: 36.4583333333vw 5.2083333333vw;
+    line-height: 9.1145833333vw;
+    font-size: 4.4270833333vw;
+  }
+  .main-section_card {
+    margin-top: 84.6354166667vw;
   }
   .main-section_card .card-game {
-    max-width: 90%;
+    width: 90%;
     border-top: 2.0833333333vw solid #63410d;
     border-bottom: 2.0833333333vw solid #63410d;
     padding: 3.125vw 0 6.5104166667vw 0;
@@ -820,7 +836,7 @@ select {
   .main-section_card .card-game .card-schedule_num {
     width: 29.9479166667vw;
     height: 11.71875vw;
-    font-size: 5.46875vw;
+    font-size: 4.6875vw;
     border-top: 1.5625vw solid #63410d;
     border-bottom: 1.5625vw solid #63410d;
     margin: 0 auto;
@@ -832,27 +848,28 @@ select {
     margin-left: 1.0416666667vw;
   }
   .main-section_card .card-game .card-question {
-    max-width: 78.125vw;
+    width: 82.03125vw;
     height: 130.2083333333vw;
   }
   .main-section_card .card-game .card-question_img {
-    width: 75.5208333333vw;
-    height: 58.59375vw;
+    width: 66.6666666667vw;
+    height: 49.4791666667vw;
     margin: 4.1666666667vw 0 4.1666666667vw;
     overflow: hidden;
     object-fit: contain;
   }
   .main-section_card .card-game .card-question_text {
     padding: 2.0833333333vw 0;
-    font-size: 4.6875vw;
+    font-size: 4.1666666667vw;
   }
   .main-section_card .card-game .card-question_answer .answer {
-    width: 80.7291666667vw;
+    width: 82.03125vw;
     height: 13.0208333333vw;
     margin-top: 4.1666666667vw;
     font-size: 4.1666666667vw;
     border: 0.78125vw solid #63410d;
     box-shadow: 0px 1.0416666667vw 0 #63410d;
+    letter-spacing: 0.1302083333vw;
   }
   .main-section_result {
     padding-bottom: 23.4375vw;
@@ -871,12 +888,10 @@ select {
     margin-bottom: 1em;
   }
   .main-section_result .game-result_tips .icon-tips {
-    background: url(../images/icon-tips.svg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 3.6458333333vw;
-    height: 4.6875vw;
-    margin-right: 1.0416666667vw;
+    width: 5.9895833333vw;
+    height: 5.2083333333vw;
+    margin-right: 2.0833333333vw;
+    transform: rotate(-16deg);
   }
 }
 .btn {
@@ -947,6 +962,14 @@ select {
   background: #fb8d01;
   box-shadow: 0 8px 0 #e04507;
 }
+.btn-link .link:hover {
+  top: 8px;
+  background: #fb8d01;
+  box-shadow: none;
+}
+.btn-link .link:hover::before, .btn-link .link:hover::after {
+  box-shadow: none;
+}
 .btn-border::before {
   content: "";
   position: absolute;
@@ -973,7 +996,7 @@ select {
     border-top: 0.7407407407vw solid #63410d;
     border-bottom: 0.7407407407vw solid #63410d;
     padding: 1.4814814815vw;
-    font-size: 1.8518518519vw;
+    font-size: 2.5925925926vw;
     width: 21.2037037037vw;
     height: 5.5555555556vw;
     box-shadow: 0 0.7407407407vw 0 #492700;
@@ -1042,7 +1065,7 @@ select {
     box-shadow: 0 1.5625vw 0 #492700;
   }
   .btn-ready {
-    bottom: 13.0208333333vw;
+    bottom: 19.53125vw;
     font-size: 4.6875vw;
     width: 31.25vw;
     height: 10.4166666667vw;
@@ -1050,9 +1073,9 @@ select {
   .btn-tips.msg {
     height: 16.2760416667vw;
     margin-top: 2.6041666667vw;
-    font-size: 4.1666666667vw;
-    border-top: 2.0833333333vw solid #b07c5d;
-    border-bottom: 2.0833333333vw solid #b07c5d;
+    font-size: 4.6875vw;
+    border-top: 1.5625vw solid #b07c5d;
+    border-bottom: 1.5625vw solid #b07c5d;
   }
   .btn-link {
     margin-top: 6.5104166667vw;
@@ -1061,13 +1084,13 @@ select {
     width: 52.0833333333vw;
     height: 13.0208333333vw;
     margin: 4.1666666667vw auto;
-    border-top: 2.0833333333vw solid #fb8d01;
-    border-bottom: 2.0833333333vw solid #fb8d01;
-    box-shadow: 0 2.0833333333vw 0 #e04507;
+    border-top: 1.5625vw solid #fb8d01;
+    border-bottom: 1.5625vw solid #fb8d01;
+    box-shadow: 0 1.5625vw 0 #e04507;
     font-size: 4.6875vw;
   }
   .btn-link .link::before, .btn-link .link::after {
-    box-shadow: 0 2.0833333333vw 0 #e04507;
+    box-shadow: 0 1.5625vw 0 #e04507;
   }
   .btn-border::before {
     left: -1.5625vw;

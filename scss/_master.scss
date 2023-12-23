@@ -96,16 +96,13 @@
   }
 
   // 主視覺
-
   &_textbox {
     position: relative;
     margin-top: 500px;
 
     .main-visual {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include center;
       @include flex-column;
       flex-wrap: wrap;
       width: 646px;
@@ -176,28 +173,26 @@
 
 
 
-
-
 .main-section {
   position: relative;
 
   &_preface {
 
+    margin-top: 600px;
+
     .main-scroll {
-      position: relative;
+      position: absolute;
       z-index: 10;
       background: url(../images/kv-scroll.png) no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-position: center;
-      width: 100%;
+      width: 660px;
       height: 850px;
+      @include center;
 
 
       &_text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        padding: 240px 0;
         line-height: px-em(40);
         font-weight: $bold;
         font-size: 24px;
@@ -210,6 +205,7 @@
   // 測驗頁
   &_card {
     position: relative;
+    margin-top: 600px;
 
     &::after {
       content: "";
@@ -228,12 +224,11 @@
     }
 
     .card-game {
-      position: relative;
+      position: absolute;
+      @include center;
       z-index: 10;
-      width: 100%;
+      width: 848px;
       height: 686px;
-      max-width: 848px;
-      margin: auto;
       background: url(../images/bg-textrue.png);
       background-size: cover;
       background-position: center;
@@ -319,8 +314,8 @@
 
       .card-question {
         @include flex-column;
-        max-width: 600px;
-        min-height: 533px;
+        width: 600px;
+        height: 533px;
         margin: 0 auto;
         text-align: center;
         font-weight: $bold;

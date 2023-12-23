@@ -103,11 +103,14 @@
   .main-section {
 
     &_preface {
+      margin-top: vw(600px);
 
       .main-scroll {
+        width: vw(660px);
         height: vw(850px);
 
         &_text {
+          padding: vw(240px) 0;
           line-height: vw(60px);
           font-size: vw(24px);
         }
@@ -115,6 +118,7 @@
     }
 
     &_card {
+      margin-top: vw(630px);
 
       &::after {
         display: none;
@@ -122,9 +126,8 @@
     }
 
     .card-game {
+      width: vw(848px);
       height: auto;
-      min-height: 100%;
-      max-width: vw(848px);
       border-top: vw(15px) solid $brown-700;
       border-bottom: vw(15px) solid $brown-700;
       padding: vw(24px) 0 vw(50px) 0;
@@ -178,8 +181,8 @@
       }
 
       .card-question {
-        max-width: vw(672px);
-        height: vw(1000px);
+        width: vw(650px);
+        height: vw(833px);
 
         &_img {
           width: vw(600px);
@@ -189,7 +192,7 @@
 
         &_text {
           padding: vw(8px) 0;
-          font-size: vw(28px);
+          font-size: vw(24px);
 
         }
 

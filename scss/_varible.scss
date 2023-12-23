@@ -98,6 +98,12 @@ $grid-breakpoints: (
   display: none;
 }
 
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin icon-skills {
   width: 50px;
   margin: auto;

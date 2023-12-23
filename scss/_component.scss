@@ -79,7 +79,19 @@
         background: $orange-500;
         box-shadow: 0 8px 0 $orange-900;
       }
+
+      &:hover {
+        top: 8px;
+        background: $orange-500;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          box-shadow: none;
+        }
+      }
     }
+
   }
 
   &-border {
@@ -113,7 +125,7 @@
     border-top: vw(8px) solid $brown-700;
     border-bottom: vw(8px) solid $brown-700;
     padding: vw(16px);
-    font-size: vw(20px);
+    font-size: vw(28px);
     @include size(vw(229px), vw(60px));
     box-shadow: 0 vw(8px) 0 $brown-900;
 
@@ -206,7 +218,7 @@
 
 
     &-ready {
-      bottom: vwm(100px);
+      bottom: vwm(150px);
       font-size: vwm(36px);
       @include size(vwm(240px), vwm(80px));
     }
@@ -216,9 +228,9 @@
       &.msg {
         height: vwm(125px);
         margin-top: vwm(20px);
-        font-size: vwm(32px);
-        border-top: vwm(16px) solid $brown-500;
-        border-bottom: vwm(16px) solid $brown-500;
+        font-size: vwm(36px);
+        border-top: vwm(12px) solid $brown-500;
+        border-bottom: vwm(12px) solid $brown-500;
 
       }
     }
@@ -230,14 +242,14 @@
         width: vwm(400px);
         height: vwm(100px);
         margin: vwm(32px) auto;
-        border-top: vwm(16px) solid $orange-500;
-        border-bottom: vwm(16px) solid $orange-500;
-        box-shadow: 0 vwm(16px) 0 $orange-900;
+        border-top: vwm(12px) solid $orange-500;
+        border-bottom: vwm(12px) solid $orange-500;
+        box-shadow: 0 vwm(12px) 0 $orange-900;
         font-size: vwm(36px);
 
         &::before,
         &::after {
-          box-shadow: 0 vwm(16px) 0 $orange-900;
+          box-shadow: 0 vwm(12px) 0 $orange-900;
         }
       }
     }

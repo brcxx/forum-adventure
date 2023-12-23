@@ -1,8 +1,5 @@
 @media screen and (max-width:($mbrwd-breakpoint * 1px)) {
 
-  .gap {
-    margin-top: vwm(322px);
-  }
 
   .section-kv {
     min-height: vwm(1294px);
@@ -116,22 +113,26 @@
   .main-section {
 
     &_preface {
+      margin-top: vwm(650px);
 
       .main-scroll {
-        height: vwm(950px);
+        width: vwm(750px);
+        height: vwm(1000px);
 
         &_text {
-          width: vwm(550px);
-          line-height: vwm(65px);
-          font-size: vwm(30px);
+          padding: vwm(280px) vwm(40px);
+          line-height: vwm(70px);
+          font-size: vwm(34px);
         }
+
       }
     }
 
     &_card {
+      margin-top: vwm(650px);
 
       .card-game {
-        max-width: 90%;
+        width: 90%;
         border-top: vwm(16px) solid $brown-700;
         border-bottom: vwm(16px) solid $brown-700;
         padding: vwm(24px) 0 vwm(50px) 0;
@@ -168,7 +169,7 @@
           &_num {
             width: vwm(230px);
             height: vwm(90px);
-            font-size: vwm(42px);
+            font-size: vwm(36px);
             border-top: vwm(12px) solid $brown-700;
             border-bottom: vwm(12px) solid $brown-700;
             margin: 0 auto;
@@ -185,12 +186,12 @@
         }
 
         .card-question {
-          max-width: vwm(600px);
+          width: vwm(630px);
           height: vwm(1000px);
 
           &_img {
-            width: vwm(580px);
-            height: vwm(450px);
+            width: vwm(512px);
+            height: vwm(380px);
             margin: vwm(32px) 0 vwm(32px);
             overflow: hidden;
             object-fit: contain;
@@ -199,19 +200,20 @@
 
           &_text {
             padding: vwm(16px) 0;
-            font-size: vwm(36px);
+            font-size: vwm(32px);
 
           }
 
           // 答題
           &_answer {
             .answer {
-              width: vwm(620px);
+              width: vwm(630px);
               height: vwm(100px);
               margin-top: vwm(32px);
               font-size: vwm(32px);
               border: vwm(6px) solid $brown-700;
               box-shadow: 0px vwm(8px) 0 $brown-700;
+              letter-spacing: vwm(1px);
             }
           }
         }
@@ -236,13 +238,10 @@
           margin-bottom: px-em(16);
 
           .icon-tips {
-            background: url(../images/icon-tips.svg)no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: vwm(28px);
-            height: vwm(36px);
-            margin-right: vwm(8px);
-
+            width: vwm(46px);
+            height: vwm(40px);
+            margin-right: vwm(16px);
+            transform: rotate(-16deg);
           }
         }
       }
