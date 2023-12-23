@@ -693,7 +693,7 @@ select {
 }
 @media screen and (max-width: 768px) {
   .section-kv {
-    min-height: 168.4895833333vw;
+    min-height: 100vh;
   }
   .section-kv_view {
     height: 111.4583333333vw;
