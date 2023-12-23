@@ -3,6 +3,7 @@
 
   .section-kv {
     min-height: 100vh;
+    height: auto;;
 
     &_view {
       height: vwm(856px);
@@ -61,7 +62,6 @@
     }
 
     &_textbox {
-      margin-top: vwm(500px);
 
       .main-visual {
         width: vwm(646px);
