@@ -1,0 +1,1094 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: Arial, "Noto Sans TC", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+h1 {
+  display: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ol,
+ul,
+p {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 30px 0;
+  letter-spacing: 0.05em;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  background: #86bef1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.gap {
+  margin-top: 13.875em;
+}
+
+.section-kv {
+  width: 100%;
+  min-height: 1294px;
+  overflow: hidden;
+  background: url(../images/bg-color.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top 25%;
+  position: relative;
+  background-attachment: fixed;
+}
+.section-kv_decobox * {
+  position: absolute;
+}
+.section-kv_view {
+  background: url(../images/bg-view.svg) no-repeat;
+  width: 120%;
+  height: 856px;
+  background-size: cover;
+  bottom: 0;
+  left: -30px;
+  background-position: center bottom;
+}
+.section-kv_dragon {
+  width: 10.25em;
+  height: 9.25em;
+  bottom: 11.5em;
+  left: calc(50% - 8.25em);
+}
+.section-kv_tree01 {
+  width: 23.8125em;
+  height: 36.6875em;
+  left: -100px;
+  bottom: 6.6875em;
+  animation: skewX 1.5s infinite;
+  animation-direction: alternate;
+  transform-origin: center bottom;
+}
+.section-kv_tree02 {
+  width: 8.75em;
+  height: 18.75em;
+  right: calc(50% - 38em);
+  bottom: 13.9375em;
+  animation: skewX 2s infinite;
+  animation-direction: alternate;
+  transform-origin: center bottom;
+}
+.section-kv_tree03 {
+  width: 25.1875em;
+  height: 28.125em;
+  right: calc(50% - 66.125em);
+  bottom: 11.5em;
+  animation: skewX 2s infinite;
+  animation-direction: alternate;
+  transform-origin: center bottom;
+}
+.section-kv_cloudy01 {
+  width: 21em;
+  height: 2.5em;
+  top: 6.25em;
+  left: calc(50% - 53.75em);
+}
+.section-kv_cloudy02 {
+  width: 17.5em;
+  height: 2.5em;
+  top: 18.75em;
+  right: calc(50% - 53.75em);
+}
+.section-kv_birds01 {
+  width: 6.3125em;
+  height: 5.0625em;
+  top: 26.375em;
+  left: calc(50% - 37.5em);
+  z-index: 1;
+}
+.section-kv_birds02 {
+  width: 18.25em;
+  height: 7.875em;
+  top: 6em;
+  right: calc(50% - 50em);
+  z-index: 1;
+}
+.section-kv_flower {
+  content: "";
+  background: url(../images/bg-flower.svg) repeat-x;
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+  animation: skewX 1.8s infinite;
+  animation-direction: alternate;
+  transform-origin: center bottom;
+}
+.section-kv_textbox {
+  position: relative;
+  margin-top: 500px;
+}
+.section-kv_textbox .main-visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 646px;
+  height: 679px;
+}
+.section-kv_textbox .main-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 626px;
+}
+.section-kv_textbox .main-title_sword {
+  width: 24.0625em;
+  height: 7.25em;
+  position: absolute;
+  top: 0;
+  right: 6px;
+  z-index: -1;
+}
+.section-kv_textbox .main-card {
+  position: absolute;
+  top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40.1875em;
+  height: 20.1875em;
+}
+.section-kv_textbox .main-card * {
+  position: absolute;
+}
+.section-kv_textbox .main-card .d-card01 {
+  width: 18.375em;
+  height: 18.375em;
+  z-index: 10;
+}
+.section-kv_textbox .main-card .d-card02 {
+  left: 0;
+  width: 17em;
+  height: 17em;
+}
+.section-kv_textbox .main-card .d-card03 {
+  right: 0;
+  width: 17em;
+  height: 17em;
+  transform: rotate(45deg);
+}
+.section-kv_textbox .main-btn_start {
+  position: absolute;
+  bottom: 0;
+}
+.section-kv_textbox .main-btn_start:hover {
+  bottom: -8px;
+  box-shadow: none;
+}
+.section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
+  box-shadow: none;
+}
+
+.main-section {
+  position: relative;
+}
+.main-section_preface .main-scroll {
+  position: relative;
+  z-index: 10;
+  background: url(../images/kv-scroll.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 850px;
+}
+.main-section_preface .main-scroll_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 2.5em;
+  font-weight: 700;
+  font-size: 24px;
+  color: #553504;
+  text-align: center;
+}
+.main-section_card {
+  position: relative;
+}
+.main-section_card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 100%;
+  height: 754px;
+  max-width: 940px;
+  background: url(../images/card-shadow.png) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  transform: translate(-50%, -50%);
+}
+.main-section_card .card-game {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 686px;
+  max-width: 848px;
+  margin: auto;
+  background: url(../images/bg-textrue.png);
+  background-size: cover;
+  background-position: center;
+  border-top: 15px solid #63410d;
+  border-bottom: 15px solid #63410d;
+  padding: 1.5em 0 3.125em 0;
+  box-sizing: border-box;
+}
+.main-section_card .card-game::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 15px;
+  height: 100%;
+  background: #63410d;
+}
+.main-section_card .card-game::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 15px;
+  height: 100%;
+  background: #63410d;
+}
+.main-section_card .card-game .card-schedule {
+  position: absolute;
+  top: -36px;
+  left: calc((100% - 180px) / 2);
+}
+.main-section_card .card-game .card-schedule::before {
+  content: "";
+  width: 8px;
+  height: 44px;
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  background: #63410d;
+}
+.main-section_card .card-game .card-schedule::after {
+  content: "";
+  width: 8px;
+  height: 44px;
+  position: absolute;
+  top: 8px;
+  right: -8px;
+  background: #63410d;
+}
+.main-section_card .card-game .card-schedule_num {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 60px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  background: url(../images/bg-score.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-top: 8px solid #63410d;
+  border-bottom: 8px solid #63410d;
+}
+.main-section_card .card-game .card-schedule_num::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #42c6ae;
+  border-radius: 100%;
+  border: 2px solid #fac90f;
+  margin-right: 8px;
+}
+.main-section_card .card-game .card-schedule_num::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #42c6ae;
+  border-radius: 100%;
+  border: 2px solid #fac90f;
+  margin-left: 8px;
+}
+.main-section_card .card-game .card-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  min-height: 533px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+}
+.main-section_card .card-game .card-question_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 412px;
+  height: 280px;
+  margin: 32px 0 20px;
+}
+.main-section_card .card-game .card-question_text {
+  padding: 8px 0;
+  font-size: 24px;
+  color: #63410d;
+}
+.main-section_card .card-game .card-question_answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-section_card .card-game .card-question_answer .answer {
+  position: relative;
+  display: inline-block;
+  width: 423px;
+  height: 64px;
+  margin-top: 16px;
+  font-size: 20px;
+  background: #fff;
+  border: 3px solid #63410d;
+  cursor: pointer;
+  color: #63410d;
+  box-shadow: 0px 8px 0 #63410d;
+}
+.main-section_card .card-game .card-question_answer .answer:hover {
+  top: 8px;
+  color: #e0f3ed;
+  background: #42c6ae;
+  border: 3px solid #5e947a;
+  box-shadow: 0px 8px 0 #5e947a;
+  box-shadow: none;
+}
+.main-section_result {
+  padding-bottom: 11.25em;
+}
+.main-section_result .game-result {
+  position: relative;
+  z-index: 10;
+  width: 750px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-section_result .game-result_card {
+  width: 750px;
+  height: 1110px;
+}
+.main-section_result .game-result_tips {
+  position: relative;
+  width: 657px;
+  height: 78px;
+  margin-bottom: 1em;
+}
+.main-section_result .game-result_tips .icon-tips {
+  background: url(../images/icon-tips.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 14px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 1080px) {
+  .gap {
+    margin-top: 7.4074074074vw;
+  }
+  .section-kv {
+    min-height: 119.8148148148vw;
+    background-position: center top;
+  }
+  .section-kv_tree01 {
+    width: 27.7777777778vw;
+    height: 46.2962962963vw;
+    left: -9.2592592593vw;
+  }
+  .section-kv_tree02 {
+    width: 9.2592592593vw;
+    height: 18.5185185185vw;
+    right: 9.2592592593vw;
+  }
+  .section-kv_tree03 {
+    width: 32.4074074074vw;
+    height: 37.037037037vw;
+    right: -18.5185185185vw;
+  }
+  .section-kv_cloudy01 {
+    width: 31.1111111111vw;
+    height: 3.7037037037vw;
+    left: -9.2592592593vw;
+  }
+  .section-kv_cloudy02 {
+    width: 25.9259259259vw;
+    height: 3.7037037037vw;
+    top: 18.5185185185vw;
+    right: -9.2592592593vw;
+  }
+  .section-kv_birds01 {
+    width: 9.3518518519vw;
+    height: 7.5vw;
+    top: 27.7777777778vw;
+    left: -0.9259259259vw;
+  }
+  .section-kv_birds02 {
+    width: 18.5185185185vw;
+    height: 16.6666666667vw;
+    top: 4.1666666667vw;
+    right: 0;
+  }
+  .section-kv_flower {
+    height: 37.037037037vw;
+  }
+  .section-kv_textbox {
+    margin-top: 46.2962962963vw;
+  }
+  .section-kv_textbox .main-visual {
+    width: 59.8148148148vw;
+    height: 62.8703703704vw;
+  }
+  .section-kv_textbox .main-title {
+    width: 57.962962963vw;
+  }
+  .section-kv_textbox .main-title_sword {
+    width: 35.6481481481vw;
+    height: 10.7407407407vw;
+    right: 0.5555555556vw;
+  }
+  .section-kv_textbox .main-card {
+    top: 23.1481481481vw;
+    width: 59.537037037vw;
+    height: 29.9074074074vw;
+  }
+  .section-kv_textbox .main-card .d-card01 {
+    width: 27.2222222222vw;
+    height: 27.2222222222vw;
+  }
+  .section-kv_textbox .main-card .d-card02,
+  .section-kv_textbox .main-card .d-card03 {
+    width: 25.1851851852vw;
+    height: 25.1851851852vw;
+  }
+  .section-kv_textbox .main-btn_start {
+    position: absolute;
+    bottom: 0;
+  }
+  .section-kv_textbox .main-btn_start:hover {
+    bottom: -8px;
+    box-shadow: none;
+  }
+  .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
+    box-shadow: none;
+  }
+  .main-section_preface .main-scroll {
+    height: 78.7037037037vw;
+  }
+  .main-section_preface .main-scroll_text {
+    line-height: 5.5555555556vw;
+    font-size: 2.2222222222vw;
+  }
+  .main-section_card::after {
+    display: none;
+  }
+  .main-section .card-game {
+    height: auto;
+    min-height: 100%;
+    max-width: 78.5185185185vw;
+    border-top: 1.3888888889vw solid #63410d;
+    border-bottom: 1.3888888889vw solid #63410d;
+    padding: 2.2222222222vw 0 4.6296296296vw 0;
+  }
+  .main-section .card-game::before {
+    left: -1.3888888889vw;
+    width: 1.3888888889vw;
+  }
+  .main-section .card-game::after {
+    right: -1.3888888889vw;
+    width: 1.3888888889vw;
+  }
+  .main-section .card-game .card-schedule {
+    top: -3.3333333333vw;
+    left: calc((100% - 16.6666666667vw) / 2);
+  }
+  .main-section .card-game .card-schedule::before {
+    width: 0.7407407407vw;
+    height: 5vw;
+    top: 0.7407407407vw;
+    left: -0.7407407407vw;
+  }
+  .main-section .card-game .card-schedule::after {
+    width: 0.7407407407vw;
+    height: 5vw;
+    top: 0.7407407407vw;
+    right: -0.7407407407vw;
+  }
+  .main-section .card-game .card-schedule_num {
+    width: 18.5185185185vw;
+    height: 6.4814814815vw;
+    font-size: 2.962962963vw;
+    border-top: 0.7407407407vw solid #63410d;
+    border-bottom: 0.7407407407vw solid #63410d;
+  }
+  .main-section .card-game .card-schedule_num::before {
+    margin-right: 0.7407407407vw;
+  }
+  .main-section .card-game .card-schedule_num::after {
+    margin-left: 0.7407407407vw;
+  }
+  .main-section .card-game .card-question {
+    max-width: 62.2222222222vw;
+    height: 92.5925925926vw;
+  }
+  .main-section .card-game .card-question_img {
+    width: 55.5555555556vw;
+    height: 38.8888888889vw;
+    margin: 2.962962963vw 0 2.962962963vw;
+  }
+  .main-section .card-game .card-question_text {
+    padding: 0.7407407407vw 0;
+    font-size: 2.5925925926vw;
+  }
+  .main-section .card-game .card-question_answer .answer {
+    width: 48.4259259259vw;
+    height: 7.2222222222vw;
+    margin-top: 1.4814814815vw;
+    font-size: 2.2222222222vw;
+    border: 0.2777777778vw solid #63410d;
+    box-shadow: 0px 0.7407407407vw 0 #63410d;
+  }
+  .main-section_result {
+    padding-bottom: 16.6666666667vw;
+  }
+  .main-section_result.gap {
+    margin-top: 16.6666666667vw;
+  }
+  .main-section_result .game-result {
+    width: 69.4444444444vw;
+  }
+  .main-section_result .game-result_card {
+    width: 69.4444444444vw;
+    height: 102.7777777778vw;
+  }
+  .main-section_result .game-result_tips {
+    position: relative;
+    width: 60.8333333333vw;
+    height: 7.2222222222vw;
+    margin-bottom: 1.4814814815vw;
+  }
+  .main-section_result .game-result_tips .icon-tips {
+    width: 1.2962962963vw;
+    height: 1.6666666667vw;
+    margin-right: 0.7407407407vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gap {
+    margin-top: 41.9270833333vw;
+  }
+  .section-kv {
+    min-height: 168.4895833333vw;
+  }
+  .section-kv_view {
+    height: 111.4583333333vw;
+    background-size: cover;
+    left: -3.90625vw;
+    background-position: center top;
+  }
+  .section-kv_dragon {
+    width: 26.0416666667vw;
+    height: 19.2708333333vw;
+    bottom: 20.3125vw;
+    left: 39.0625vw;
+  }
+  .section-kv_tree01 {
+    width: 39.0625vw;
+    height: 65.1041666667vw;
+    left: -26.0416666667vw;
+    bottom: 13.9322916667vw;
+  }
+  .section-kv_tree02 {
+    width: 13.0208333333vw;
+    height: 26.0416666667vw;
+    right: 10.4166666667vw;
+    bottom: 26.0416666667vw;
+  }
+  .section-kv_tree03 {
+    width: 45.5729166667vw;
+    height: 52.0833333333vw;
+    right: -33.8541666667vw;
+    bottom: 23.4375vw;
+  }
+  .section-kv_cloudy01 {
+    width: 43.75vw;
+    height: 5.2083333333vw;
+    top: 26.0416666667vw;
+    left: -13.0208333333vw;
+  }
+  .section-kv_cloudy02 {
+    width: 36.4583333333vw;
+    height: 5.2083333333vw;
+    top: 31.25vw;
+    right: -23.4375vw;
+  }
+  .section-kv_birds01 {
+    display: none;
+  }
+  .section-kv_birds02 {
+    display: none;
+  }
+  .section-kv_flower {
+    height: 52.0833333333vw;
+  }
+  .section-kv_textbox {
+    margin-top: 65.1041666667vw;
+  }
+  .section-kv_textbox .main-visual {
+    width: 84.1145833333vw;
+    height: 91.1458333333vw;
+  }
+  .section-kv_textbox .main-title {
+    width: 83.3333333333vw;
+  }
+  .section-kv_textbox .main-title_sword {
+    width: 50.1302083333vw;
+    height: 15.1041666667vw;
+    right: 1.8229166667vw;
+  }
+  .section-kv_textbox .main-card {
+    top: 32.5520833333vw;
+    width: 83.7239583333vw;
+    height: 42.0572916667vw;
+  }
+  .section-kv_textbox .main-card .d-card01 {
+    width: 38.28125vw;
+    height: 38.28125vw;
+  }
+  .section-kv_textbox .main-card .d-card02,
+  .section-kv_textbox .main-card .d-card03 {
+    width: 35.4166666667vw;
+    height: 35.4166666667vw;
+  }
+  .section-kv_textbox .main-btn_start {
+    position: absolute;
+    bottom: -1.3020833333vw;
+    width: 46.875vw;
+    height: 13.0208333333vw;
+  }
+  .section-kv_textbox .main-btn_start:hover {
+    bottom: -8px;
+    box-shadow: none;
+  }
+  .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
+    box-shadow: none;
+  }
+  .main-section_preface .main-scroll {
+    height: 123.6979166667vw;
+  }
+  .main-section_preface .main-scroll_text {
+    width: 71.6145833333vw;
+    line-height: 8.4635416667vw;
+    font-size: 3.90625vw;
+  }
+  .main-section_card .card-game {
+    max-width: 90%;
+    border-top: 2.0833333333vw solid #63410d;
+    border-bottom: 2.0833333333vw solid #63410d;
+    padding: 3.125vw 0 6.5104166667vw 0;
+  }
+  .main-section_card .card-game::before {
+    left: -1.953125vw;
+    width: 2.0833333333vw;
+  }
+  .main-section_card .card-game::after {
+    right: -1.953125vw;
+    width: 2.0833333333vw;
+  }
+  .main-section_card .card-game .card-schedule {
+    top: -5.859375vw;
+    left: calc((100% - 29.9479166667vw) / 2);
+  }
+  .main-section_card .card-game .card-schedule::before {
+    width: 1.5625vw;
+    height: 8.59375vw;
+    top: 1.5625vw;
+    left: -1.5625vw;
+  }
+  .main-section_card .card-game .card-schedule::after {
+    width: 1.5625vw;
+    height: 8.59375vw;
+    top: 1.5625vw;
+    right: -1.5625vw;
+  }
+  .main-section_card .card-game .card-schedule_num {
+    width: 29.9479166667vw;
+    height: 11.71875vw;
+    font-size: 5.46875vw;
+    border-top: 1.5625vw solid #63410d;
+    border-bottom: 1.5625vw solid #63410d;
+    margin: 0 auto;
+  }
+  .main-section_card .card-game .card-schedule_num::before {
+    margin-right: 1.0416666667vw;
+  }
+  .main-section_card .card-game .card-schedule_num::after {
+    margin-left: 1.0416666667vw;
+  }
+  .main-section_card .card-game .card-question {
+    max-width: 78.125vw;
+    height: 130.2083333333vw;
+  }
+  .main-section_card .card-game .card-question_img {
+    width: 75.5208333333vw;
+    height: 58.59375vw;
+    margin: 4.1666666667vw 0 4.1666666667vw;
+    overflow: hidden;
+    object-fit: contain;
+  }
+  .main-section_card .card-game .card-question_text {
+    padding: 2.0833333333vw 0;
+    font-size: 4.6875vw;
+  }
+  .main-section_card .card-game .card-question_answer .answer {
+    width: 80.7291666667vw;
+    height: 13.0208333333vw;
+    margin-top: 4.1666666667vw;
+    font-size: 4.1666666667vw;
+    border: 0.78125vw solid #63410d;
+    box-shadow: 0px 1.0416666667vw 0 #63410d;
+  }
+  .main-section_result {
+    padding-bottom: 23.4375vw;
+  }
+  .main-section_result .game-result {
+    width: 97.65625vw;
+  }
+  .main-section_result .game-result_card {
+    width: 91.1458333333vw;
+    height: auto;
+  }
+  .main-section_result .game-result_tips {
+    position: relative;
+    width: 85.546875vw;
+    height: 10.15625vw;
+    margin-bottom: 1em;
+  }
+  .main-section_result .game-result_tips .icon-tips {
+    background: url(../images/icon-tips.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 3.6458333333vw;
+    height: 4.6875vw;
+    margin-right: 1.0416666667vw;
+  }
+}
+.btn {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 8px solid #63410d;
+  border-bottom: 8px solid #63410d;
+  font-size: 28px;
+  width: 229px;
+  height: 64px;
+  box-shadow: 0 8px 0 #492700;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-start {
+  background: #b07c5d;
+  color: #fff;
+}
+.btn-start:hover {
+  background: #63410d;
+}
+.btn-ready {
+  background: #63410d;
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-ready:hover {
+  bottom: 122px;
+  box-shadow: none;
+}
+.btn-ready:hover::before, .btn-ready:hover::after {
+  box-shadow: none;
+}
+.btn-tips {
+  background: #63410d;
+  cursor: initial;
+}
+.btn-tips.msg {
+  width: 100%;
+  height: 60px;
+  font-weight: initial;
+  font-size: 24px;
+  color: #fac90f;
+  border-top: 8px solid #b07c5d;
+  border-bottom: 8px solid #b07c5d;
+  box-shadow: none;
+}
+.btn-tips.msg::before, .btn-tips.msg::after {
+  background: #b07c5d;
+  box-shadow: none;
+}
+.btn-link .link {
+  width: 400px;
+  margin: 1em auto;
+  border-top: 8px solid #fb8d01;
+  border-bottom: 8px solid #fb8d01;
+  background: #ea6006;
+  box-shadow: 0 8px 0 #e04507;
+  font-size: 24px;
+}
+.btn-link .link::before, .btn-link .link::after {
+  background: #fb8d01;
+  box-shadow: 0 8px 0 #e04507;
+}
+.btn-border::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: #63410d;
+  box-shadow: 0 8px 0 #492700;
+}
+.btn-border::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: #63410d;
+  box-shadow: 0 8px 0 #492700;
+}
+
+@media screen and (max-width: 1080px) {
+  .btn {
+    border-top: 0.7407407407vw solid #63410d;
+    border-bottom: 0.7407407407vw solid #63410d;
+    padding: 1.4814814815vw;
+    font-size: 1.8518518519vw;
+    width: 21.2037037037vw;
+    height: 5.5555555556vw;
+    box-shadow: 0 0.7407407407vw 0 #492700;
+  }
+  .btn-start {
+    margin-top: 5.5555555556vw;
+  }
+  .btn-ready {
+    bottom: 12.037037037vw;
+  }
+  .btn-ready:hover {
+    bottom: 11.2962962963vw;
+    box-shadow: none;
+  }
+  .btn-ready:hover::before, .btn-ready:hover::after {
+    box-shadow: none;
+  }
+  .btn-border::before {
+    left: -0.7407407407vw;
+    width: 0.7407407407vw;
+    box-shadow: 0 0.7407407407vw 0 #492700;
+  }
+  .btn-border::after {
+    content: "";
+    position: absolute;
+    right: -0.7407407407vw;
+    width: 0.7407407407vw;
+    box-shadow: 0 1.0416666667vw 0 #492700;
+  }
+  .btn-tips.msg {
+    height: 5.5555555556vw;
+    margin-top: 1.8518518519vw;
+    font-size: 2.2222222222vw;
+    border-top: 0.7407407407vw solid #b07c5d;
+    border-bottom: 0.7407407407vw solid #b07c5d;
+  }
+  .btn-link .link {
+    width: 37.037037037vw;
+    margin: 2.2222222222vw auto;
+    border-top: 0.7407407407vw solid #fb8d01;
+    border-bottom: 0.7407407407vw solid #fb8d01;
+    box-shadow: 0 0.7407407407vw 0 #e04507;
+    font-size: 2.2222222222vw;
+  }
+  .btn-link .link::before, .btn-link .link::after {
+    box-shadow: 0 0.7407407407vw 0 #e04507;
+  }
+  .btn-border::before {
+    left: -0.7407407407vw;
+    width: 0.7407407407vw;
+    box-shadow: 0 0.7407407407vw 0 #492700;
+  }
+  .btn-border::after {
+    right: -0.7407407407vw;
+    width: 0.7407407407vw;
+    box-shadow: 0 0.7407407407vw 0 #492700;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    border-top: 1.5625vw solid #63410d;
+    border-bottom: 1.5625vw solid #63410d;
+    font-size: 5.2083333333vw;
+    width: 46.875vw;
+    height: 7.8125vw;
+    box-shadow: 0 1.5625vw 0 #492700;
+  }
+  .btn-ready {
+    bottom: 13.0208333333vw;
+    font-size: 4.6875vw;
+    width: 31.25vw;
+    height: 10.4166666667vw;
+  }
+  .btn-tips.msg {
+    height: 16.2760416667vw;
+    margin-top: 2.6041666667vw;
+    font-size: 4.1666666667vw;
+    border-top: 2.0833333333vw solid #b07c5d;
+    border-bottom: 2.0833333333vw solid #b07c5d;
+  }
+  .btn-link {
+    margin-top: 6.5104166667vw;
+  }
+  .btn-link .link {
+    width: 52.0833333333vw;
+    height: 13.0208333333vw;
+    margin: 4.1666666667vw auto;
+    border-top: 2.0833333333vw solid #fb8d01;
+    border-bottom: 2.0833333333vw solid #fb8d01;
+    box-shadow: 0 2.0833333333vw 0 #e04507;
+    font-size: 4.6875vw;
+  }
+  .btn-link .link::before, .btn-link .link::after {
+    box-shadow: 0 2.0833333333vw 0 #e04507;
+  }
+  .btn-border::before {
+    left: -1.5625vw;
+    width: 1.5625vw;
+    box-shadow: 0 1.5625vw 0 #492700;
+  }
+  .btn-border::after {
+    content: "";
+    position: absolute;
+    right: -1.5625vw;
+    width: 1.5625vw;
+    box-shadow: 0 1.5625vw 0 #492700;
+  }
+}
+@keyframes skewX {
+  0% {
+    -webkit-transform: skewX(1deg);
+    transform: skewX(1deg);
+  }
+  100% {
+    -webkit-transform: skewX(-2deg);
+    transform: skewX(-2deg);
+  }
+}

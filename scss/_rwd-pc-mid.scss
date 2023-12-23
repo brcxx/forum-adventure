@@ -1,0 +1,243 @@
+@media screen and (max-width:($pcrwd-breakpoint * 1px)) {
+
+  .gap {
+    margin-top: vw(80px);
+  }
+
+  .section-kv {
+    min-height: vw(1294px);
+    background-position: center top;
+
+    &_tree01 {
+      @include size(vw(300px), vw(500px));
+      left: vw(-100px);
+    }
+
+    &_tree02 {
+      @include size(vw(100px), vw(200px));
+      right: vw(100px);
+    }
+
+    &_tree03 {
+      @include size(vw(350px), vw(400px));
+      right: vw(-200px);
+    }
+
+    &_cloudy01 {
+      @include size(vw(336px), vw(40px));
+      left: vw(-100px);
+    }
+
+    &_cloudy02 {
+      @include size(vw(280px), vw(40px));
+      top: vw(200px);
+      right: vw(-100px);
+    }
+
+    &_birds01 {
+      @include size(vw(101px), vw(81px));
+      top: vw(300px);
+      left: vw(-10px);
+    }
+
+    &_birds02 {
+      @include size(vw(200px), vw(180px));
+      top: vw(45px);
+      right: 0;
+    }
+
+    &_flower {
+      height: vw(400px);
+    }
+
+    &_textbox {
+      margin-top: vw(500px);
+
+      .main-visual {
+        width: vw(646px);
+        height: vw(679px);
+
+      }
+
+      .main-title {
+        width: vw(626px);
+
+        &_sword {
+          @include size(vw(385px), vw(116px));
+          right: vw(6px);
+        }
+      }
+
+      .main-card {
+        top: vw(250px);
+        @include size(vw(643px), vw(323px));
+
+        .d-card01 {
+          @include size(vw(294px));
+        }
+
+        .d-card02,
+        .d-card03 {
+          @include size(vw(272px));
+        }
+      }
+
+      .main-btn_start {
+        position: absolute;
+        bottom: 0;
+
+        &:hover {
+          bottom: -8px;
+          box-shadow: none;
+
+          &::before,
+          &::after {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+  }
+
+  .main-section {
+
+    &_preface {
+
+      .main-scroll {
+        height: vw(850px);
+
+        &_text {
+          line-height: vw(60px);
+          font-size: vw(24px);
+        }
+      }
+    }
+
+    &_card {
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .card-game {
+      height: auto;
+      min-height: 100%;
+      max-width: vw(848px);
+      border-top: vw(15px) solid $brown-700;
+      border-bottom: vw(15px) solid $brown-700;
+      padding: vw(24px) 0 vw(50px) 0;
+
+
+      &::before {
+        left: vw(-15px);
+        width: vw(15px);
+      }
+
+      &::after {
+        right: vw(-15px);
+        width: vw(15px);
+      }
+
+      .card-schedule {
+        top: vw(-36px);
+        left: calc((100% - vw(180px)) / 2);
+
+        &::before {
+          width: vw(8px);
+          height: vw(54px);
+          top: vw(8px);
+          left: vw(-8px);
+        }
+
+        &::after {
+          width: vw(8px);
+          height: vw(54px);
+          top: vw(8px);
+          right: vw(-8px);
+        }
+
+        &_num {
+          width: vw(200px);
+          height: vw(70px);
+
+          font-size: vw(32px);
+          border-top: vw(8px) solid $brown-700;
+          border-bottom: vw(8px) solid $brown-700;
+
+          &::before {
+            margin-right: vw(8px);
+          }
+
+          &::after {
+            margin-left: vw(8px);
+          }
+
+        }
+      }
+
+      .card-question {
+        max-width: vw(672px);
+        height: vw(1000px);
+
+        &_img {
+          width: vw(600px);
+          height: vw(420px);
+          margin: vw(32px) 0 vw(32px);
+        }
+
+        &_text {
+          padding: vw(8px) 0;
+          font-size: vw(28px);
+
+        }
+
+        // 答題
+        &_answer {
+          .answer {
+            width: vw(523px);
+            height: vw(78px);
+            margin-top: vw(16px);
+            font-size: vw(24px);
+            border: vw(3px) solid $brown-700;
+            box-shadow: 0px vw(8px) 0 $brown-700;
+          }
+        }
+
+      }
+    }
+
+    // 結果頁
+    &_result {
+      padding-bottom: vw(180px);
+
+      &.gap {
+        margin-top: vw(180px);
+      }
+
+      .game-result {
+        width: vw(750px);
+
+        &_card {
+          width: vw(750px);
+          height: vw(1110px);
+        }
+
+        &_tips {
+          position: relative;
+          width: vw(657px);
+          height: vw(78px);
+          margin-bottom: vw(16px);
+
+          .icon-tips {
+            width: vw(14px);
+            height: vw(18px);
+            margin-right: vw(8px);
+
+          }
+        }
+      }
+    }
+  }
+}

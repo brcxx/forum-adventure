@@ -1,0 +1,251 @@
+@media screen and (max-width:($mbrwd-breakpoint * 1px)) {
+
+  .gap {
+    margin-top: vwm(322px);
+  }
+
+  .section-kv {
+    min-height: vwm(1294px);
+
+    &_view {
+      height: vwm(856px);
+      background-size: cover;
+      left: vwm(-30px);
+      background-position: center top;
+    }
+
+    &_dragon {
+      @include size(vwm(200px), vwm(148px));
+      bottom: vwm(156px);
+      left: vwm(300px);
+    }
+
+    &_tree01 {
+      @include size(vwm(300px), vwm(500px));
+      left: vwm(-200px);
+      bottom: vwm(107px)
+    }
+
+    &_tree02 {
+      @include size(vwm(100px), vwm(200px));
+      right: vwm(80px);
+      bottom: vwm(200px)
+    }
+
+    &_tree03 {
+      @include size(vwm(350px), vwm(400px));
+      right: vwm(-260px);
+      bottom: vwm(180px);
+    }
+
+    &_cloudy01 {
+      @include size(vwm(336px), vwm(40px));
+      top: vwm(200px);
+      left: vwm(-100px);
+    }
+
+    &_cloudy02 {
+      @include size(vwm(280px), vwm(40px));
+      top: vwm(240px);
+      right: vwm(-180px);
+    }
+
+
+    &_birds01 {
+      @include hidden;
+    }
+
+    &_birds02 {
+      @include hidden;
+    }
+
+    &_flower {
+      height: vwm(400px);
+    }
+
+    &_textbox {
+      margin-top: vwm(500px);
+
+      .main-visual {
+        width: vwm(646px);
+        height: vwm(700px);
+
+      }
+
+      .main-title {
+        width: vw(900px);
+
+        &_sword {
+          @include size(vwm(385px), vwm(116px));
+          right: vwm(14px);
+        }
+      }
+
+      .main-card {
+        top: vwm(250px);
+        @include size(vwm(643px), vwm(323px));
+
+        .d-card01 {
+          @include size(vwm(294px));
+        }
+
+        .d-card02,
+        .d-card03 {
+          @include size(vwm(272px));
+        }
+      }
+
+      .main-btn_start {
+        position: absolute;
+        bottom: vwm(-10px);
+        @include size(vwm(360px), vwm(100px));
+
+        &:hover {
+          bottom: -8px;
+          box-shadow: none;
+
+          &::before,
+          &::after {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .main-section {
+
+    &_preface {
+
+      .main-scroll {
+        height: vwm(950px);
+
+        &_text {
+          width: vwm(550px);
+          line-height: vwm(65px);
+          font-size: vwm(30px);
+        }
+      }
+    }
+
+    &_card {
+
+      .card-game {
+        max-width: 90%;
+        border-top: vwm(16px) solid $brown-700;
+        border-bottom: vwm(16px) solid $brown-700;
+        padding: vwm(24px) 0 vwm(50px) 0;
+
+
+        &::before {
+          left: vwm(-15px);
+          width: vwm(16px);
+        }
+
+        &::after {
+          right: vwm(-15px);
+          width: vwm(16px);
+        }
+
+        .card-schedule {
+          top: vwm(-45px);
+          left: calc((100% - vwm(230px)) / 2);
+
+          &::before {
+            width: vwm(12px);
+            height: vwm(66px);
+            top: vwm(12px);
+            left: vwm(-12px);
+          }
+
+          &::after {
+            width: vwm(12px);
+            height: vwm(66px);
+            top: vwm(12px);
+            right: vwm(-12px);
+          }
+
+          &_num {
+            width: vwm(230px);
+            height: vwm(90px);
+            font-size: vwm(42px);
+            border-top: vwm(12px) solid $brown-700;
+            border-bottom: vwm(12px) solid $brown-700;
+            margin: 0 auto;
+
+            &::before {
+              margin-right: vwm(8px);
+            }
+
+            &::after {
+              margin-left: vwm(8px);
+            }
+
+          }
+        }
+
+        .card-question {
+          max-width: vwm(600px);
+          height: vwm(1000px);
+
+          &_img {
+            width: vwm(580px);
+            height: vwm(450px);
+            margin: vwm(32px) 0 vwm(32px);
+            overflow: hidden;
+            object-fit: contain;
+
+          }
+
+          &_text {
+            padding: vwm(16px) 0;
+            font-size: vwm(36px);
+
+          }
+
+          // 答題
+          &_answer {
+            .answer {
+              width: vwm(620px);
+              height: vwm(100px);
+              margin-top: vwm(32px);
+              font-size: vwm(32px);
+              border: vwm(6px) solid $brown-700;
+              box-shadow: 0px vwm(8px) 0 $brown-700;
+            }
+          }
+        }
+      }
+    }
+
+    &_result {
+      padding-bottom: vwm(180px);
+
+      .game-result {
+        width: vwm(750px);
+
+        &_card {
+          width: vwm(700px);
+          height: auto;
+        }
+
+        &_tips {
+          position: relative;
+          width: vwm(657px);
+          height: vwm(78px);
+          margin-bottom: px-em(16);
+
+          .icon-tips {
+            background: url(../images/icon-tips.svg)no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: vwm(28px);
+            height: vwm(36px);
+            margin-right: vwm(8px);
+
+          }
+        }
+      }
+    }
+  }
+}
