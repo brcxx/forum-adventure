@@ -52,7 +52,6 @@
 
     &_textbox {
 
-      margin-top: 0;
       .main-visual {
         width: vw(646px);
         height: vw(679px);
@@ -103,7 +102,6 @@
   .main-section {
 
     &_preface {
-      margin-top: vw(600px);
 
       .main-scroll {
         width: vw(660px);
@@ -118,7 +116,6 @@
     }
 
     &_card {
-      margin-top: vw(630px);
 
       &::after {
         display: none;
@@ -213,7 +210,7 @@
 
     // 結果頁
     &_result {
-      padding-bottom: vw(180px);
+      padding: vw(180px) 0;
 
       &.gap {
         margin-top: vw(180px);

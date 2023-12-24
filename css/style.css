@@ -121,11 +121,10 @@ select {
 }
 .section-kv_view {
   background: url(../images/bg-view.svg) no-repeat;
-  width: 120%;
+  width: 100%;
   height: 856px;
   background-size: cover;
   bottom: 0;
-  left: -30px;
   background-position: center bottom;
 }
 .section-kv_dragon {
@@ -202,7 +201,6 @@ select {
 }
 .section-kv_textbox {
   position: relative;
-  margin-top: 100px;
   min-height: 100vh;
 }
 .section-kv_textbox .main-visual {
@@ -275,9 +273,10 @@ select {
 
 .main-section {
   position: relative;
+  min-height: 100vh;
 }
 .main-section_preface {
-  margin-top: 600px;
+  min-height: 100vh;
 }
 .main-section_preface .main-scroll {
   position: absolute;
@@ -298,10 +297,6 @@ select {
   font-size: 24px;
   color: #553504;
   text-align: center;
-}
-.main-section_card {
-  position: relative;
-  margin-top: 600px;
 }
 .main-section_card::after {
   content: "";
@@ -463,7 +458,7 @@ select {
   box-shadow: none;
 }
 .main-section_result {
-  padding-bottom: 11.25em;
+  padding: 11.25em 0;
 }
 .main-section_result .game-result {
   position: relative;
@@ -544,9 +539,6 @@ select {
   .section-kv_flower {
     height: 37.037037037vw;
   }
-  .section-kv_textbox {
-    margin-top: 0;
-  }
   .section-kv_textbox .main-visual {
     width: 59.8148148148vw;
     height: 62.8703703704vw;
@@ -584,9 +576,6 @@ select {
   .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
     box-shadow: none;
   }
-  .main-section_preface {
-    margin-top: 55.5555555556vw;
-  }
   .main-section_preface .main-scroll {
     width: 61.1111111111vw;
     height: 78.7037037037vw;
@@ -595,9 +584,6 @@ select {
     padding: 22.2222222222vw 0;
     line-height: 5.5555555556vw;
     font-size: 2.2222222222vw;
-  }
-  .main-section_card {
-    margin-top: 58.3333333333vw;
   }
   .main-section_card::after {
     display: none;
@@ -668,7 +654,7 @@ select {
     box-shadow: 0px 0.7407407407vw 0 #63410d;
   }
   .main-section_result {
-    padding-bottom: 16.6666666667vw;
+    padding: 16.6666666667vw 0;
   }
   .main-section_result.gap {
     margin-top: 16.6666666667vw;
@@ -693,15 +679,8 @@ select {
   }
 }
 @media screen and (max-width: 768px) {
-  .section-kv {
-    min-height: 100vh;
-    height: auto;
-  }
   .section-kv_view {
     height: 111.4583333333vw;
-    background-size: cover;
-    left: -3.90625vw;
-    background-position: center top;
   }
   .section-kv_dragon {
     width: 26.0416666667vw;
@@ -787,9 +766,6 @@ select {
   .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
     box-shadow: none;
   }
-  .main-section_preface {
-    margin-top: 84.6354166667vw;
-  }
   .main-section_preface .main-scroll {
     width: 97.65625vw;
     height: 130.2083333333vw;
@@ -798,9 +774,6 @@ select {
     padding: 36.4583333333vw 5.2083333333vw;
     line-height: 9.1145833333vw;
     font-size: 4.4270833333vw;
-  }
-  .main-section_card {
-    margin-top: 84.6354166667vw;
   }
   .main-section_card .card-game {
     width: 90%;
@@ -871,7 +844,7 @@ select {
     letter-spacing: 0.1302083333vw;
   }
   .main-section_result {
-    padding-bottom: 23.4375vw;
+    padding: 16.6666666667vw 0;
   }
   .main-section_result .game-result {
     width: 97.65625vw;

@@ -37,9 +37,9 @@
         <div class="section-kv_cloudy02"><img src="./images/bg-cloudy-right.svg" alt=""></div>
         <div class="section-kv_flower"></div>
       </div>
-      <div class="main-section">
+      <div class="main-section container">
         <!-- 起始頁 開始 -->
-        <section class="section-kv_textbox">
+        <!-- <section class="section-kv_textbox">
           <div class="main-visual">
             <div class="main-title">
               <div class="main-title_text">
@@ -56,11 +56,11 @@
             </div>
             <button class="btn btn-border btn-start main-btn_start">開始測驗</button>
           </div>
-        </section>
+        </section> -->
         <!-- 起始頁 結束 -->
 
         <!-- 準備頁 開始 -->
-        <!-- <section class="main-section_preface gap">
+        <!-- <section class="main-section_preface">
           <div class="main-scroll">
             <div class="main-scroll_text">
               這裡是傳說中的神龍所棲息的大陸<br>
@@ -76,7 +76,7 @@
         <!-- 準備頁 結束 -->
 
         <!-- 查看頁 開始 -->
-        <!-- <section class="main-section_preface main-section_end gap">
+        <!-- <section class="main-section_preface">
           <div class="main-scroll ">
             <div class="main-scroll_text">
               在努力後你找到了巴哈姆特的巢穴<br>
@@ -112,7 +112,7 @@
         <!-- 測驗頁 結束 -->
 
         <!-- 結果頁 開始 -->
-        <!-- <section class="main-section_result gap">
+        <section class="main-section_result">
           <div class="game-result">
             <div class="game-result_card"><img src="./images/result-page-01.png"></div>
             <div class="game-result_tips">
@@ -124,7 +124,7 @@
               <a class="btn btn-border btn-click link" href="">其他活動任務</a>
             </div>
           </div>
-        </section> -->
+        </section>
         <!-- 結果頁 結束 -->
       </div>
     </div>
@@ -149,7 +149,37 @@
         }
       })
     })
-    screen.lockOrientation("landscape");
+  </script>
+
+  <script>
+    // 检测当前屏幕宽度
+    function isMobileOrTablet() {
+        return window.innerWidth <= 768; // 根据需要调整阈值
+    }
+
+    // 锁定屏幕方向
+    function lockScreenOrientation() {
+        if (isMobileOrTablet()) {
+            // 禁止方向变化
+            window.addEventListener('orientationchange', handleOrientationChange);
+            handleOrientationChange(); // 初始时执行一次以确保方向正确
+        }
+    }
+
+    // 处理方向变化事件
+    function handleOrientationChange() {
+        if (isMobileOrTablet()) {
+            // 禁止方向变化
+            if (window.orientation !== 0) {
+                // orientation 为 0 表示纵向，此时不进行处理
+                window.orientation === 90 ? screen.lockOrientation('landscape-primary') : screen.lockOrientation('landscape-secondary');
+            }
+        }
+    }
+
+    // 初始化时锁定屏幕方向
+    lockScreenOrientation();
+
   </script>
 </body>
 
