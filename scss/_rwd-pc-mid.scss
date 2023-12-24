@@ -6,7 +6,10 @@
 
   .section-kv {
     min-height: vw(1294px);
-    background-position: center top;
+
+    &::after {
+      height: vw(400px);
+    }
 
     &_tree01 {
       @include size(vw(300px), vw(500px));
@@ -84,16 +87,6 @@
       .main-btn_start {
         position: absolute;
         bottom: 0;
-
-        &:hover {
-          bottom: -8px;
-          box-shadow: none;
-
-          &::before,
-          &::after {
-            box-shadow: none;
-          }
-        }
       }
     }
 
@@ -102,7 +95,7 @@
   .main-section {
 
     &_preface {
-
+      margin: vw(150px) auto;
       .main-scroll {
         width: vw(660px);
         height: vw(850px);
@@ -115,6 +108,7 @@
       }
     }
 
+  // 測驗頁
     &_card {
 
       &::after {
@@ -125,11 +119,9 @@
     .card-game {
       width: vw(848px);
       height: auto;
-      padding: vw(24px) 0 vw(50px) 0;
       margin: vw(300px) auto;
       border-top: vw(15px) solid $brown-700;
       border-bottom: vw(15px) solid $brown-700;
-
 
       &::before {
         left: vw(-15px);
@@ -179,8 +171,7 @@
       }
 
       .card-question {
-        width: vw(650px);
-        height: vw(833px);
+        @include size(vw(650px), vw(733px));
 
         &_img {
           width: vw(600px);
@@ -211,7 +202,7 @@
 
     // 結果頁
     &_result {
-      padding-bottom: vw(180px);
+      margin: vw(180px) 0;
 
       &.gap {
         margin-top: vw(180px);

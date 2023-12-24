@@ -1,63 +1,58 @@
 @media screen and (max-width:($mbrwd-breakpoint * 1px)) {
 
-
   .section-kv {
+    min-height: vwm(1294px);
+
+    &::after {
+      height: vwm(400px);
+    }
 
     &_view {
-      height: vwm(856px);
+      height: vwm(1500px);
     }
 
     &_dragon {
       @include size(vwm(200px), vwm(148px));
-      bottom: vwm(156px);
+      bottom: vwm(312px);
       left: vwm(300px);
     }
 
     &_tree01 {
       @include size(vwm(300px), vwm(500px));
       left: vwm(-200px);
-      bottom: vwm(107px)
+      bottom: vwm(257px)
     }
 
     &_tree02 {
       @include size(vwm(100px), vwm(200px));
-      right: vwm(80px);
-      bottom: vwm(200px)
+      right: vwm(112px);
+      bottom: vwm(350px)
     }
 
     &_tree03 {
       @include size(vwm(350px), vwm(400px));
-      right: vwm(-260px);
-      bottom: vwm(180px);
+      right: vwm(-250px);
+      bottom: vwm(260px);
     }
 
     &_cloudy01 {
       @include size(vwm(336px), vwm(40px));
-      top: vwm(200px);
-      left: vwm(-100px);
+      top: vwm(50px);
+      left: vwm(-150px);
     }
 
     &_cloudy02 {
       @include size(vwm(280px), vwm(40px));
-      top: vwm(240px);
-      right: vwm(-180px);
+      top: vwm(140px);
+      right: vwm(-100px);
     }
 
-
-    &_birds01 {
-      @include hidden;
-    }
-
+    &_birds01,
     &_birds02 {
       @include hidden;
     }
 
-    &_flower {
-      height: vwm(400px);
-    }
-
     &_textbox {
-
       .main-visual {
         width: vwm(646px);
         height: vwm(700px);
@@ -92,23 +87,14 @@
         bottom: vwm(-10px);
         @include size(vwm(360px), vwm(100px));
 
-        &:hover {
-          bottom: -8px;
-          box-shadow: none;
-
-          &::before,
-          &::after {
-            box-shadow: none;
-          }
-        }
       }
     }
   }
 
   .main-section {
-
+    
     &_preface {
-
+      margin: vwm(150px) auto;
       .main-scroll {
         width: vwm(750px);
         height: vwm(1000px);
@@ -129,7 +115,7 @@
         border-top: vwm(16px) solid $brown-700;
         border-bottom: vwm(16px) solid $brown-700;
         padding: vwm(24px) 0 vwm(50px) 0;
-        margin: vwm(260px) auto;
+        margin: vwm(200px) auto;
 
 
         &::before {
@@ -180,13 +166,13 @@
         }
 
         .card-question {
-          width: vwm(630px);
-          height: vwm(1000px);
+          @include size(vwm(630px), vwm(933px));
+          padding-top: vwm(30px);
 
           &_img {
             width: vwm(512px);
             height: vwm(380px);
-            margin: vwm(32px) 0 vwm(32px);
+            margin: vwm(32px) auto vwm(32px);
             overflow: hidden;
             object-fit: contain;
 
@@ -216,7 +202,7 @@
     }
 
     &_result {
-      padding: vwm(180px) 0;
+      margin: vwm(180px) 0;
 
       .game-result {
         width: vwm(750px);
@@ -233,7 +219,7 @@
           margin-bottom: px-em(16);
 
           .icon-tips {
-            width: vwm(46px);
+            width: vwm(39px);
             height: vwm(40px);
             margin-right: vwm(16px);
             transform: rotate(-16deg);

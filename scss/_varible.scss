@@ -132,7 +132,6 @@ $grid-breakpoints: (
   transform-origin: center bottom;
 }
 
-
 @mixin breakpoint($breakpoints) {
   @if type_of($breakpoints)==number {
     @media (max-width:(breakpoint + px)) {

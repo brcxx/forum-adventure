@@ -2,14 +2,14 @@
   position: relative;
   z-index: 10;
   @include flex-center;
+  width: 229px;
+  height: 64px;
   border-top: 8px solid $brown-700;
   border-bottom: 8px solid $brown-700;
   font-size: 28px;
-  width: 229px;
-  height: 64px;
-  box-shadow: 0 8px 0 $brown-900;
   font-weight: $bold;
   color: $white;
+  box-shadow: 0 8px 0 $brown-900;
   cursor: pointer;
 
   &-start {
@@ -23,9 +23,9 @@
 
 
   &-ready {
-    background: $brown-700;
     position: absolute;
     bottom: 130px;
+    background: $brown-700;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -64,7 +64,6 @@
   }
 
   &-link {
-
     .link {
       width: 400px;
       margin: px-em(16) auto;
@@ -117,7 +116,6 @@
       box-shadow: 0 8px 0 $brown-900;
     }
   }
-
 }
 
 @media screen and (max-width:($pcrwd-breakpoint * 1px)) {
@@ -138,22 +136,6 @@
 
       &:hover {
         bottom: vw(122px);
-      }
-    }
-
-    &-border {
-      &::before {
-        left: vw(-8px);
-        width: vw(8px);
-        box-shadow: 0 vw(8px) 0 $brown-900;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: vw(-8px);
-        width: vw(8px);
-        box-shadow: 0 vwm(8px) 0 $brown-900;
       }
     }
 
@@ -254,7 +236,7 @@
 
     &-border {
       &::before {
-        left: vwm(-11px);
+        left: vwm(-10px);
         width: vwm(12px);
         box-shadow: 0 vwm(12px) 0 $brown-900;
       }
@@ -262,7 +244,7 @@
       &::after {
         content: "";
         position: absolute;
-        right: vwm(-11px);
+        right: vwm(-10px);
         width: vwm(12px);
         box-shadow: 0 vwm(12px) 0 $brown-900;
       }

@@ -1,19 +1,32 @@
 .section-kv {
+  position: relative;
   width: 100%;
   min-height: 1294px;
   overflow: hidden;
   background: url(../images/bg-color.jpg) no-repeat;
   background-size: cover;
-  background-position: center top 25%;
-  position: relative;
+  background-position: center top 50%;
   background-attachment: fixed;
-
 
   &_decobox {
     * {
       position: absolute;
     }
+  }
 
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    background: url(../images/bg-flower.svg)repeat-x;
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    height: 388px;
+    bottom: 0;
+    left: 0;
+    animation: skewX 1.8s infinite;
+    @include wabble;
   }
 
   &_view {
@@ -27,13 +40,13 @@
 
   &_dragon {
     @include size(px-em(164), px-em(148));
-    bottom: px-em(184);
+    bottom: px-em(174);
     left: calc(50% + px-em(-132));
   }
 
   &_tree01 {
     @include size(px-em(381), px-em(587));
-    left: -100px;
+    left: -30px;
     bottom: px-em(107);
     animation: skewX 1.5s infinite;
     @include wabble;
@@ -42,7 +55,7 @@
   &_tree02 {
     @include size(px-em(140), px-em(300));
     right: calc(50% + px-em(-608));
-    bottom: px-em(223);
+    bottom: px-em(200);
     animation: skewX 2s infinite;
     @include wabble;
   }
@@ -59,40 +72,31 @@
     @include size(px-em(336), px-em(40));
     top: px-em(100);
     left: calc(50% + px-em(-860));
+    animation: float2 3s -3s infinite alternate-reverse;
   }
 
   &_cloudy02 {
     @include size(px-em(280), px-em(40));
     top: px-em(300);
     right: calc(50% + px-em(-860));
+    animation: float2 3s -3s infinite alternate-reverse;
   }
 
   &_birds01 {
     @include size(px-em(101), px-em(81));
     top: px-em(422);
     left: calc(50% + px-em(-600));
-    z-index: 1;
+    animation: float 1.5s ease-in-out infinite;
   }
 
   &_birds02 {
     @include size(px-em(292), px-em(126));
     top: px-em(96);
     right: calc(50% + px-em(-800));
-    z-index: 1;
+    animation: float 2s ease-in-out infinite;
   }
 
-  &_flower {
-    content: "";
-    background: url(../images/bg-flower.svg)repeat-x;
-    background-position: center bottom;
-    background-size: cover;
-    width: 100%;
-    height: 400px;
-    bottom: 0;
-    left: 0;
-    animation: skewX 1.8s infinite;
-    @include wabble;
-  }
+
 
   // 主視覺
   &_textbox {
@@ -167,19 +171,14 @@
       }
     }
   }
-
 }
-
-
 
 .main-section {
   position: relative;
   min-height: 100vh;
 
   &_preface {
-
-    min-height: 100vh;
-
+    margin:150px auto;
     .main-scroll {
       position: absolute;
       z-index: 10;
@@ -189,7 +188,6 @@
       width: 660px;
       height: 850px;
       @include center;
-
 
       &_text {
         padding: 240px 0;
@@ -209,8 +207,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
+      @include center;
       z-index: 1;
       width: 100%;
       height: 754px;
@@ -218,21 +215,20 @@
       background: url(../images/card-shadow.png)no-repeat;
       background-size: cover;
       background-position: center top;
-      transform: translate(-50%, -50%);
     }
 
     .card-game {
       position: relative;
+      z-index: 12;
       width: 848px;
       height: 686px;
-      z-index: 9;
+      padding: px-em(24) 0 px-em(50);
+      margin:300px auto;
       background: url(../images/bg-textrue.png);
       background-size: cover;
       background-position: center;
       border-top: 15px solid $brown-700;
       border-bottom: 15px solid $brown-700;
-      padding: px-em(24) 0 px-em(50) 0;
-      margin:300px auto;
 
       &::before {
         content: "";
@@ -304,84 +300,70 @@
             @include dots;
             margin-left: 8px;
           }
-
-
         }
-
       }
 
       .card-question {
-        @include flex-column;
-        width: 600px;
-        height: 533px;
+        position: relative;
+        z-index: 10;
+        @include size((600px), (533px));
         margin: 0 auto;
         text-align: center;
         font-weight: $bold;
-        position: relative;
-        z-index: 99;
 
         &_img {
           @include flex-center;
           width: 412px;
           height: 280px;
-          margin: 32px 0 20px;
+          margin: 32px auto 20px;
         }
 
         &_text {
           padding: 8px 0;
-          font-size: 24px;
+          font-size: 28px;
           color: $brown-700;
-
         }
 
-        // 答題
-
+        // 答題區
         &_answer {
           @include flex-column;
 
           .answer {
             position: relative;
             display: inline-block;
-            width: 423px;
+            width: 100%;
             height: 64px;
             margin-top: 16px;
-            font-size: 20px;
+            font-size: 24px;
+            color: $brown-700;
             background: $white;
             border: 3px solid $brown-700;
-            cursor: pointer;
-            color: $brown-700;
             box-shadow: 0px 8px 0 $brown-700;
-
+            cursor: pointer;
 
             &:hover {
               top: 8px;
               color: $green-lake-100;
               background: $green-lake-300;
               border: 3px solid $green-lake-700;
-              box-shadow: 0px 8px 0 $green-lake-700;
               box-shadow: none;
             }
           }
-
         }
-
       }
-
     }
-
   }
 
   // 結果頁
   &_result {
-    padding: px-em(180);
+    margin: px-em(180) auto;
 
     .game-result {
       position: relative;
       z-index: 10;
+      @include flex-column;
       width: 750px;
       margin: auto;
-      text-align: center;
-      @include flex-column;
 
       &_card {
         width: 750px;

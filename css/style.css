@@ -107,17 +107,32 @@ select {
 }
 
 .section-kv {
+  position: relative;
   width: 100%;
   min-height: 1294px;
   overflow: hidden;
   background: url(../images/bg-color.jpg) no-repeat;
   background-size: cover;
-  background-position: center top 25%;
-  position: relative;
+  background-position: center top 50%;
   background-attachment: fixed;
 }
 .section-kv_decobox * {
   position: absolute;
+}
+.section-kv::after {
+  content: "";
+  position: absolute;
+  z-index: 6;
+  background: url(../images/bg-flower.svg) repeat-x;
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 388px;
+  bottom: 0;
+  left: 0;
+  animation: skewX 1.8s infinite;
+  animation-direction: alternate;
+  transform-origin: center bottom;
 }
 .section-kv_view {
   background: url(../images/bg-view.svg) no-repeat;
@@ -130,13 +145,13 @@ select {
 .section-kv_dragon {
   width: 10.25em;
   height: 9.25em;
-  bottom: 11.5em;
+  bottom: 10.875em;
   left: calc(50% - 8.25em);
 }
 .section-kv_tree01 {
   width: 23.8125em;
   height: 36.6875em;
-  left: -100px;
+  left: -30px;
   bottom: 6.6875em;
   animation: skewX 1.5s infinite;
   animation-direction: alternate;
@@ -146,7 +161,7 @@ select {
   width: 8.75em;
   height: 18.75em;
   right: calc(50% - 38em);
-  bottom: 13.9375em;
+  bottom: 12.5em;
   animation: skewX 2s infinite;
   animation-direction: alternate;
   transform-origin: center bottom;
@@ -165,39 +180,28 @@ select {
   height: 2.5em;
   top: 6.25em;
   left: calc(50% - 53.75em);
+  animation: float2 3s -3s infinite alternate-reverse;
 }
 .section-kv_cloudy02 {
   width: 17.5em;
   height: 2.5em;
   top: 18.75em;
   right: calc(50% - 53.75em);
+  animation: float2 3s -3s infinite alternate-reverse;
 }
 .section-kv_birds01 {
   width: 6.3125em;
   height: 5.0625em;
   top: 26.375em;
   left: calc(50% - 37.5em);
-  z-index: 1;
+  animation: float 1.5s ease-in-out infinite;
 }
 .section-kv_birds02 {
   width: 18.25em;
   height: 7.875em;
   top: 6em;
   right: calc(50% - 50em);
-  z-index: 1;
-}
-.section-kv_flower {
-  content: "";
-  background: url(../images/bg-flower.svg) repeat-x;
-  background-position: center bottom;
-  background-size: cover;
-  width: 100%;
-  height: 400px;
-  bottom: 0;
-  left: 0;
-  animation: skewX 1.8s infinite;
-  animation-direction: alternate;
-  transform-origin: center bottom;
+  animation: float 2s ease-in-out infinite;
 }
 .section-kv_textbox {
   position: relative;
@@ -276,7 +280,7 @@ select {
   min-height: 100vh;
 }
 .main-section_preface {
-  min-height: 100vh;
+  margin: 150px auto;
 }
 .main-section_preface .main-scroll {
   position: absolute;
@@ -306,6 +310,7 @@ select {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   width: 100%;
   height: 754px;
@@ -313,20 +318,19 @@ select {
   background: url(../images/card-shadow.png) no-repeat;
   background-size: cover;
   background-position: center top;
-  transform: translate(-50%, -50%);
 }
 .main-section_card .card-game {
   position: relative;
+  z-index: 12;
   width: 848px;
   height: 686px;
-  z-index: 9;
+  padding: 1.5em 0 3.125em;
+  margin: 300px auto;
   background: url(../images/bg-textrue.png);
   background-size: cover;
   background-position: center;
   border-top: 15px solid #63410d;
   border-bottom: 15px solid #63410d;
-  padding: 1.5em 0 3.125em 0;
-  margin: 300px auto;
 }
 .main-section_card .card-game::before {
   content: "";
@@ -408,17 +412,13 @@ select {
   margin-left: 8px;
 }
 .main-section_card .card-game .card-question {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  z-index: 10;
   width: 600px;
   height: 533px;
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
-  position: relative;
-  z-index: 99;
 }
 .main-section_card .card-game .card-question_img {
   display: flex;
@@ -426,11 +426,11 @@ select {
   align-items: center;
   width: 412px;
   height: 280px;
-  margin: 32px 0 20px;
+  margin: 32px auto 20px;
 }
 .main-section_card .card-game .card-question_text {
   padding: 8px 0;
-  font-size: 24px;
+  font-size: 28px;
   color: #63410d;
 }
 .main-section_card .card-game .card-question_answer {
@@ -442,37 +442,35 @@ select {
 .main-section_card .card-game .card-question_answer .answer {
   position: relative;
   display: inline-block;
-  width: 423px;
+  width: 100%;
   height: 64px;
   margin-top: 16px;
-  font-size: 20px;
+  font-size: 24px;
+  color: #63410d;
   background: #fff;
   border: 3px solid #63410d;
-  cursor: pointer;
-  color: #63410d;
   box-shadow: 0px 8px 0 #63410d;
+  cursor: pointer;
 }
 .main-section_card .card-game .card-question_answer .answer:hover {
   top: 8px;
   color: #e0f3ed;
   background: #42c6ae;
   border: 3px solid #5e947a;
-  box-shadow: 0px 8px 0 #5e947a;
   box-shadow: none;
 }
 .main-section_result {
-  padding: 11.25em;
+  margin: 11.25em auto;
 }
 .main-section_result .game-result {
   position: relative;
   z-index: 10;
-  width: 750px;
-  margin: auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 750px;
+  margin: auto;
 }
 .main-section_result .game-result_card {
   width: 750px;
@@ -499,7 +497,9 @@ select {
   }
   .section-kv {
     min-height: 119.8148148148vw;
-    background-position: center top;
+  }
+  .section-kv::after {
+    height: 37.037037037vw;
   }
   .section-kv_tree01 {
     width: 27.7777777778vw;
@@ -572,12 +572,8 @@ select {
     position: absolute;
     bottom: 0;
   }
-  .section-kv_textbox .main-btn_start:hover {
-    bottom: -8px;
-    box-shadow: none;
-  }
-  .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
-    box-shadow: none;
+  .main-section_preface {
+    margin: 13.8888888889vw auto;
   }
   .main-section_preface .main-scroll {
     width: 61.1111111111vw;
@@ -594,7 +590,6 @@ select {
   .main-section .card-game {
     width: 78.5185185185vw;
     height: auto;
-    padding: 2.2222222222vw 0 4.6296296296vw 0;
     margin: 27.7777777778vw auto;
     border-top: 1.3888888889vw solid #63410d;
     border-bottom: 1.3888888889vw solid #63410d;
@@ -638,7 +633,7 @@ select {
   }
   .main-section .card-game .card-question {
     width: 60.1851851852vw;
-    height: 77.1296296296vw;
+    height: 67.8703703704vw;
   }
   .main-section .card-game .card-question_img {
     width: 55.5555555556vw;
@@ -658,7 +653,7 @@ select {
     box-shadow: 0px 0.7407407407vw 0 #63410d;
   }
   .main-section_result {
-    padding-bottom: 16.6666666667vw;
+    margin: 16.6666666667vw 0;
   }
   .main-section_result.gap {
     margin-top: 16.6666666667vw;
@@ -683,53 +678,53 @@ select {
   }
 }
 @media screen and (max-width: 768px) {
+  .section-kv {
+    min-height: 168.4895833333vw;
+  }
+  .section-kv::after {
+    height: 52.0833333333vw;
+  }
   .section-kv_view {
-    height: 111.4583333333vw;
+    height: 195.3125vw;
   }
   .section-kv_dragon {
     width: 26.0416666667vw;
     height: 19.2708333333vw;
-    bottom: 20.3125vw;
+    bottom: 40.625vw;
     left: 39.0625vw;
   }
   .section-kv_tree01 {
     width: 39.0625vw;
     height: 65.1041666667vw;
     left: -26.0416666667vw;
-    bottom: 13.9322916667vw;
+    bottom: 33.4635416667vw;
   }
   .section-kv_tree02 {
     width: 13.0208333333vw;
     height: 26.0416666667vw;
-    right: 10.4166666667vw;
-    bottom: 26.0416666667vw;
+    right: 14.5833333333vw;
+    bottom: 45.5729166667vw;
   }
   .section-kv_tree03 {
     width: 45.5729166667vw;
     height: 52.0833333333vw;
-    right: -33.8541666667vw;
-    bottom: 23.4375vw;
+    right: -32.5520833333vw;
+    bottom: 33.8541666667vw;
   }
   .section-kv_cloudy01 {
     width: 43.75vw;
     height: 5.2083333333vw;
-    top: 26.0416666667vw;
-    left: -13.0208333333vw;
+    top: 6.5104166667vw;
+    left: -19.53125vw;
   }
   .section-kv_cloudy02 {
     width: 36.4583333333vw;
     height: 5.2083333333vw;
-    top: 31.25vw;
-    right: -23.4375vw;
+    top: 18.2291666667vw;
+    right: -13.0208333333vw;
   }
-  .section-kv_birds01 {
+  .section-kv_birds01, .section-kv_birds02 {
     display: none;
-  }
-  .section-kv_birds02 {
-    display: none;
-  }
-  .section-kv_flower {
-    height: 52.0833333333vw;
   }
   .section-kv_textbox .main-visual {
     width: 84.1145833333vw;
@@ -763,12 +758,8 @@ select {
     width: 46.875vw;
     height: 13.0208333333vw;
   }
-  .section-kv_textbox .main-btn_start:hover {
-    bottom: -8px;
-    box-shadow: none;
-  }
-  .section-kv_textbox .main-btn_start:hover::before, .section-kv_textbox .main-btn_start:hover::after {
-    box-shadow: none;
+  .main-section_preface {
+    margin: 19.53125vw auto;
   }
   .main-section_preface .main-scroll {
     width: 97.65625vw;
@@ -784,7 +775,7 @@ select {
     border-top: 2.0833333333vw solid #63410d;
     border-bottom: 2.0833333333vw solid #63410d;
     padding: 3.125vw 0 6.5104166667vw 0;
-    margin: 33.8541666667vw auto;
+    margin: 26.0416666667vw auto;
   }
   .main-section_card .card-game::before {
     left: -1.953125vw;
@@ -826,12 +817,13 @@ select {
   }
   .main-section_card .card-game .card-question {
     width: 82.03125vw;
-    height: 130.2083333333vw;
+    height: 121.484375vw;
+    padding-top: 3.90625vw;
   }
   .main-section_card .card-game .card-question_img {
     width: 66.6666666667vw;
     height: 49.4791666667vw;
-    margin: 4.1666666667vw 0 4.1666666667vw;
+    margin: 4.1666666667vw auto 4.1666666667vw;
     overflow: hidden;
     object-fit: contain;
   }
@@ -849,7 +841,7 @@ select {
     letter-spacing: 0.1302083333vw;
   }
   .main-section_result {
-    padding: 23.4375vw 0;
+    margin: 23.4375vw 0;
   }
   .main-section_result .game-result {
     width: 97.65625vw;
@@ -865,7 +857,7 @@ select {
     margin-bottom: 1em;
   }
   .main-section_result .game-result_tips .icon-tips {
-    width: 5.9895833333vw;
+    width: 5.078125vw;
     height: 5.2083333333vw;
     margin-right: 2.0833333333vw;
     transform: rotate(-16deg);
@@ -877,14 +869,14 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 229px;
+  height: 64px;
   border-top: 8px solid #63410d;
   border-bottom: 8px solid #63410d;
   font-size: 28px;
-  width: 229px;
-  height: 64px;
-  box-shadow: 0 8px 0 #492700;
   font-weight: 700;
   color: #fff;
+  box-shadow: 0 8px 0 #492700;
   cursor: pointer;
 }
 .btn-start {
@@ -895,9 +887,9 @@ select {
   background: #63410d;
 }
 .btn-ready {
-  background: #63410d;
   position: absolute;
   bottom: 130px;
+  background: #63410d;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -987,18 +979,6 @@ select {
   .btn-ready:hover {
     bottom: 11.2962962963vw;
   }
-  .btn-border::before {
-    left: -0.7407407407vw;
-    width: 0.7407407407vw;
-    box-shadow: 0 0.7407407407vw 0 #492700;
-  }
-  .btn-border::after {
-    content: "";
-    position: absolute;
-    right: -0.7407407407vw;
-    width: 0.7407407407vw;
-    box-shadow: 0 1.0416666667vw 0 #492700;
-  }
   .btn-tips.msg {
     height: 5.5555555556vw;
     margin-top: 1.8518518519vw;
@@ -1069,25 +1049,47 @@ select {
     box-shadow: 0 1.5625vw 0 #e04507;
   }
   .btn-border::before {
-    left: -1.4322916667vw;
+    left: -1.3020833333vw;
     width: 1.5625vw;
     box-shadow: 0 1.5625vw 0 #492700;
   }
   .btn-border::after {
     content: "";
     position: absolute;
-    right: -1.4322916667vw;
+    right: -1.3020833333vw;
     width: 1.5625vw;
     box-shadow: 0 1.5625vw 0 #492700;
   }
 }
 @keyframes skewX {
   0% {
-    -webkit-transform: skewX(1deg);
     transform: skewX(1deg);
   }
   100% {
-    -webkit-transform: skewX(-2deg);
     transform: skewX(-2deg);
+  }
+}
+@keyframes skew {
+  0% {
+    transform: skewX(5deg) translate(-3px);
+  }
+  100% {
+    transform: skewX(-5deg) translate(3px);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translatey(-5px);
+  }
+  50% {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-5px);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translateX(20px);
   }
 }
