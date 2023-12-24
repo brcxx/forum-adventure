@@ -97,14 +97,16 @@
   // 主視覺
   &_textbox {
     position: relative;
-    width: 646px;
-    height: 679px;
-    margin:0 auto;
+    min-height: 100vh;
 
     .main-visual {
+      position: absolute;
+      @include center;
       @include flex-column;
       flex-wrap: wrap;
-      margin-top: px-em(185);
+      width: 646px;
+      height: 679px;
+
     }
 
     .main-title {
@@ -368,7 +370,7 @@
 
   // 結果頁
   &_result {
-    padding: px-em(180) 0;
+    padding: px-em(180);
 
     .game-result {
       position: relative;

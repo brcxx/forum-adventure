@@ -56,13 +56,12 @@
       height: vwm(400px);
     }
 
-    // 主視覺
     &_textbox {
-      width: vwm(646px);
-      height: vwm(679px);
 
       .main-visual {
-        margin-top: vwm(385px);
+        width: vwm(646px);
+        height: vwm(700px);
+
       }
 
       .main-title {
@@ -215,7 +214,7 @@
     }
 
     &_result {
-      padding: vw(180px) 0;
+      padding: vwm(180px) 0;
 
       .game-result {
         width: vwm(750px);

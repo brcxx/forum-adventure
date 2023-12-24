@@ -201,17 +201,20 @@ select {
 }
 .section-kv_textbox {
   position: relative;
-  width: 646px;
-  height: 679px;
-  margin: 0 auto;
+  min-height: 100vh;
 }
 .section-kv_textbox .main-visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 11.5625em;
+  width: 646px;
+  height: 679px;
 }
 .section-kv_textbox .main-title {
   position: absolute;
@@ -455,7 +458,7 @@ select {
   box-shadow: none;
 }
 .main-section_result {
-  padding: 11.25em 0;
+  padding: 11.25em;
 }
 .main-section_result .game-result {
   position: relative;
@@ -537,6 +540,9 @@ select {
     height: 37.037037037vw;
   }
   .section-kv_textbox {
+    margin-top: 0;
+  }
+  .section-kv_textbox .main-visual {
     width: 59.8148148148vw;
     height: 62.8703703704vw;
   }
@@ -581,6 +587,9 @@ select {
     padding: 22.2222222222vw 0;
     line-height: 5.5555555556vw;
     font-size: 2.2222222222vw;
+  }
+  .main-section_card {
+    margin-top: 58.3333333333vw;
   }
   .main-section_card::after {
     display: none;
@@ -651,7 +660,7 @@ select {
     box-shadow: 0px 0.7407407407vw 0 #63410d;
   }
   .main-section_result {
-    padding: 16.6666666667vw 0;
+    padding-bottom: 16.6666666667vw;
   }
   .main-section_result.gap {
     margin-top: 16.6666666667vw;
@@ -724,12 +733,9 @@ select {
   .section-kv_flower {
     height: 52.0833333333vw;
   }
-  .section-kv_textbox {
-    width: 84.1145833333vw;
-    height: 88.4114583333vw;
-  }
   .section-kv_textbox .main-visual {
-    margin-top: 50.1302083333vw;
+    width: 84.1145833333vw;
+    height: 91.1458333333vw;
   }
   .section-kv_textbox .main-title {
     width: 83.3333333333vw;
@@ -844,7 +850,7 @@ select {
     letter-spacing: 0.1302083333vw;
   }
   .main-section_result {
-    padding: 16.6666666667vw 0;
+    padding: 23.4375vw 0;
   }
   .main-section_result .game-result {
     width: 97.65625vw;

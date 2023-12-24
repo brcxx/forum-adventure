@@ -50,11 +50,14 @@
       height: vw(400px);
     }
 
-    // 主視覺
     &_textbox {
-      width: vw(646px);
-      height: vw(679px);
 
+      margin-top: 0;
+      .main-visual {
+        width: vw(646px);
+        height: vw(679px);
+
+      }
 
       .main-title {
         width: vw(626px);
@@ -114,6 +117,7 @@
     }
 
     &_card {
+      margin-top: vw(630px);
 
       &::after {
         display: none;
@@ -208,7 +212,7 @@
 
     // 結果頁
     &_result {
-      padding: vw(180px) 0;
+      padding-bottom: vw(180px);
 
       &.gap {
         margin-top: vw(180px);
