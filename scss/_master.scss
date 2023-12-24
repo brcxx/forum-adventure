@@ -204,7 +204,8 @@
 
   // 測驗頁
   &_card {
-
+    position: relative;
+    
     &::after {
       content: "";
       position: absolute;
@@ -218,22 +219,20 @@
       background-size: cover;
       background-position: center top;
       transform: translate(-50%, -50%);
-
     }
 
     .card-game {
-      position: absolute;
-      @include center;
-      z-index: 10;
+      position: relative;
       width: 848px;
       height: 686px;
+      z-index: 9;
       background: url(../images/bg-textrue.png);
       background-size: cover;
       background-position: center;
       border-top: 15px solid $brown-700;
       border-bottom: 15px solid $brown-700;
       padding: px-em(24) 0 px-em(50) 0;
-      box-sizing: border-box;
+      margin:300px auto;
 
       &::before {
         content: "";
@@ -259,6 +258,7 @@
         position: absolute;
         top: -36px;
         left: calc((100% - 180px) / 2);
+        z-index: 99;
 
         &::before {
           content: "";
@@ -317,6 +317,8 @@
         margin: 0 auto;
         text-align: center;
         font-weight: $bold;
+        position: relative;
+        z-index: 99;
 
         &_img {
           @include flex-center;
@@ -364,6 +366,7 @@
         }
 
       }
+
     }
 
   }

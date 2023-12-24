@@ -123,12 +123,13 @@
     }
 
     &_card {
-
+      
       .card-game {
         width: 90%;
         border-top: vwm(16px) solid $brown-700;
         border-bottom: vwm(16px) solid $brown-700;
         padding: vwm(24px) 0 vwm(50px) 0;
+        margin: vwm(260px) auto;
 
 
         &::before {
@@ -210,6 +211,7 @@
             }
           }
         }
+        
       }
     }
 

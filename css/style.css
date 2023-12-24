@@ -298,6 +298,9 @@ select {
   color: #553504;
   text-align: center;
 }
+.main-section_card {
+  position: relative;
+}
 .main-section_card::after {
   content: "";
   position: absolute;
@@ -313,20 +316,17 @@ select {
   transform: translate(-50%, -50%);
 }
 .main-section_card .card-game {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+  position: relative;
   width: 848px;
   height: 686px;
+  z-index: 9;
   background: url(../images/bg-textrue.png);
   background-size: cover;
   background-position: center;
   border-top: 15px solid #63410d;
   border-bottom: 15px solid #63410d;
   padding: 1.5em 0 3.125em 0;
-  box-sizing: border-box;
+  margin: 300px auto;
 }
 .main-section_card .card-game::before {
   content: "";
@@ -350,6 +350,7 @@ select {
   position: absolute;
   top: -36px;
   left: calc((100% - 180px) / 2);
+  z-index: 99;
 }
 .main-section_card .card-game .card-schedule::before {
   content: "";
@@ -416,6 +417,8 @@ select {
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
+  position: relative;
+  z-index: 99;
 }
 .main-section_card .card-game .card-question_img {
   display: flex;
@@ -591,9 +594,10 @@ select {
   .main-section .card-game {
     width: 78.5185185185vw;
     height: auto;
+    padding: 2.2222222222vw 0 4.6296296296vw 0;
+    margin: 27.7777777778vw auto;
     border-top: 1.3888888889vw solid #63410d;
     border-bottom: 1.3888888889vw solid #63410d;
-    padding: 2.2222222222vw 0 4.6296296296vw 0;
   }
   .main-section .card-game::before {
     left: -1.3888888889vw;
@@ -780,6 +784,7 @@ select {
     border-top: 2.0833333333vw solid #63410d;
     border-bottom: 2.0833333333vw solid #63410d;
     padding: 3.125vw 0 6.5104166667vw 0;
+    margin: 33.8541666667vw auto;
   }
   .main-section_card .card-game::before {
     left: -1.953125vw;

@@ -151,36 +151,6 @@
     })
   </script>
 
-  <script>
-    // 检测当前屏幕宽度
-    function isMobileOrTablet() {
-        return window.innerWidth <= 768; // 根据需要调整阈值
-    }
-
-    // 锁定屏幕方向
-    function lockScreenOrientation() {
-        if (isMobileOrTablet()) {
-            // 禁止方向变化
-            window.addEventListener('orientationchange', handleOrientationChange);
-            handleOrientationChange(); // 初始时执行一次以确保方向正确
-        }
-    }
-
-    // 处理方向变化事件
-    function handleOrientationChange() {
-        if (isMobileOrTablet()) {
-            // 禁止方向变化
-            if (window.orientation !== 0) {
-                // orientation 为 0 表示纵向，此时不进行处理
-                window.orientation === 90 ? screen.lockOrientation('landscape-primary') : screen.lockOrientation('landscape-secondary');
-            }
-        }
-    }
-
-    // 初始化时锁定屏幕方向
-    lockScreenOrientation();
-
-  </script>
 </body>
 
 </html>

@@ -125,9 +125,10 @@
     .card-game {
       width: vw(848px);
       height: auto;
+      padding: vw(24px) 0 vw(50px) 0;
+      margin: vw(300px) auto;
       border-top: vw(15px) solid $brown-700;
       border-bottom: vw(15px) solid $brown-700;
-      padding: vw(24px) 0 vw(50px) 0;
 
 
       &::before {
