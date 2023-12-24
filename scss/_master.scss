@@ -97,16 +97,14 @@
   // 主視覺
   &_textbox {
     position: relative;
-    min-height: 100vh;
+    width: 646px;
+    height: 679px;
+    margin:0 auto;
 
     .main-visual {
-      position: absolute;
-      @include center;
       @include flex-column;
       flex-wrap: wrap;
-      width: 646px;
-      height: 679px;
-
+      margin-top: px-em(185);
     }
 
     .main-title {

@@ -201,20 +201,17 @@ select {
 }
 .section-kv_textbox {
   position: relative;
-  min-height: 100vh;
+  width: 646px;
+  height: 679px;
+  margin: 0 auto;
 }
 .section-kv_textbox .main-visual {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 646px;
-  height: 679px;
+  margin-top: 11.5625em;
 }
 .section-kv_textbox .main-title {
   position: absolute;
@@ -539,7 +536,7 @@ select {
   .section-kv_flower {
     height: 37.037037037vw;
   }
-  .section-kv_textbox .main-visual {
+  .section-kv_textbox {
     width: 59.8148148148vw;
     height: 62.8703703704vw;
   }
@@ -727,9 +724,12 @@ select {
   .section-kv_flower {
     height: 52.0833333333vw;
   }
-  .section-kv_textbox .main-visual {
+  .section-kv_textbox {
     width: 84.1145833333vw;
-    height: 91.1458333333vw;
+    height: 88.4114583333vw;
+  }
+  .section-kv_textbox .main-visual {
+    margin-top: 50.1302083333vw;
   }
   .section-kv_textbox .main-title {
     width: 83.3333333333vw;

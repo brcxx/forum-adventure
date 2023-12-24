@@ -56,12 +56,13 @@
       height: vwm(400px);
     }
 
+    // 主視覺
     &_textbox {
+      width: vwm(646px);
+      height: vwm(679px);
 
       .main-visual {
-        width: vwm(646px);
-        height: vwm(700px);
-
+        margin-top: vwm(385px);
       }
 
       .main-title {
