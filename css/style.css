@@ -539,9 +539,6 @@ select {
   .section-kv_flower {
     height: 37.037037037vw;
   }
-  .section-kv_textbox {
-    margin-top: 0;
-  }
   .section-kv_textbox .main-visual {
     width: 59.8148148148vw;
     height: 62.8703703704vw;
@@ -951,7 +948,7 @@ select {
 .btn-border::before {
   content: "";
   position: absolute;
-  left: -8px;
+  left: -7px;
   top: 0;
   width: 8px;
   height: 100%;
@@ -961,7 +958,7 @@ select {
 .btn-border::after {
   content: "";
   position: absolute;
-  right: -8px;
+  right: -7px;
   top: 0;
   width: 8px;
   height: 100%;
@@ -987,10 +984,6 @@ select {
   }
   .btn-ready:hover {
     bottom: 11.2962962963vw;
-    box-shadow: none;
-  }
-  .btn-ready:hover::before, .btn-ready:hover::after {
-    box-shadow: none;
   }
   .btn-border::before {
     left: -0.7407407407vw;
@@ -1023,12 +1016,12 @@ select {
     box-shadow: 0 0.7407407407vw 0 #e04507;
   }
   .btn-border::before {
-    left: -0.7407407407vw;
+    left: -0.6481481481vw;
     width: 0.7407407407vw;
     box-shadow: 0 0.7407407407vw 0 #492700;
   }
   .btn-border::after {
-    right: -0.7407407407vw;
+    right: -0.6481481481vw;
     width: 0.7407407407vw;
     box-shadow: 0 0.7407407407vw 0 #492700;
   }
@@ -1043,10 +1036,13 @@ select {
     box-shadow: 0 1.5625vw 0 #492700;
   }
   .btn-ready {
-    bottom: 19.53125vw;
+    bottom: 16.9270833333vw;
     font-size: 4.6875vw;
     width: 31.25vw;
     height: 10.4166666667vw;
+  }
+  .btn-ready:hover {
+    bottom: 15.8854166667vw;
   }
   .btn-tips.msg {
     height: 16.2760416667vw;
@@ -1071,14 +1067,14 @@ select {
     box-shadow: 0 1.5625vw 0 #e04507;
   }
   .btn-border::before {
-    left: -1.5625vw;
+    left: -1.4322916667vw;
     width: 1.5625vw;
     box-shadow: 0 1.5625vw 0 #492700;
   }
   .btn-border::after {
     content: "";
     position: absolute;
-    right: -1.5625vw;
+    right: -1.4322916667vw;
     width: 1.5625vw;
     box-shadow: 0 1.5625vw 0 #492700;
   }

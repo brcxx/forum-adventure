@@ -98,7 +98,7 @@
     &::before {
       content: "";
       position: absolute;
-      left: -8px;
+      left: -7px;
       top: 0;
       width: 8px;
       height: 100%;
@@ -109,7 +109,7 @@
     &::after {
       content: "";
       position: absolute;
-      right: -8px;
+      right: -7px;
       top: 0;
       width: 8px;
       height: 100%;
@@ -138,12 +138,6 @@
 
       &:hover {
         bottom: vw(122px);
-        box-shadow: none;
-
-        &::before,
-        &::after {
-          box-shadow: none;
-        }
       }
     }
 
@@ -194,13 +188,13 @@
 
     &-border {
       &::before {
-        left: vw(-8px);
+        left: vw(-7px);
         width: vw(8px);
         box-shadow: 0 vw(8px) 0 $brown-900;
       }
 
       &::after {
-        right: vw(-8px);
+        right: vw(-7px);
         width: vw(8px);
         box-shadow: 0 vw(8px) 0 $brown-900;
       }
@@ -218,9 +212,13 @@
 
 
     &-ready {
-      bottom: vwm(150px);
+      bottom: vwm(130px);
       font-size: vwm(36px);
       @include size(vwm(240px), vwm(80px));
+
+      &:hover {
+        bottom: vwm(122px);
+      }
     }
 
     &-tips {
@@ -256,7 +254,7 @@
 
     &-border {
       &::before {
-        left: vwm(-12px);
+        left: vwm(-11px);
         width: vwm(12px);
         box-shadow: 0 vwm(12px) 0 $brown-900;
       }
@@ -264,7 +262,7 @@
       &::after {
         content: "";
         position: absolute;
-        right: vwm(-12px);
+        right: vwm(-11px);
         width: vwm(12px);
         box-shadow: 0 vwm(12px) 0 $brown-900;
       }
