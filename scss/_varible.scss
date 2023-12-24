@@ -15,6 +15,7 @@ $orange-500: #fb8d01;
 $green-lake-700: #5e947a;
 $green-lake-300: #42c6ae;
 $green-lake-100: #e0f3ed;
+
 $bold: 700;
 $medium: 500;
 
@@ -29,7 +30,6 @@ $grid-breakpoints: (
   lg: 1080px,
   xl: $pcrwd-breakpoint * 1px,
   xxl: 1400px) !default;
-
 
 
 @function vw($target) {
@@ -99,23 +99,12 @@ $grid-breakpoints: (
 }
 
 @mixin center {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-@mixin icon-skills {
-  width: 50px;
-  margin: auto;
-
-  @include breakpoint(xl) {
-    width: vw(50px);
-  }
-
-  @include breakpoint(md) {
-    width: vwm(50px);
-  }
-}
 
 @mixin dots {
   content: "";

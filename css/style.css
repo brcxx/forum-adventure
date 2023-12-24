@@ -226,6 +226,7 @@ select {
   left: 0;
   z-index: 99;
   width: 626px;
+  animation: bounce 4s ease infinite;
 }
 .section-kv_textbox .main-title_sword {
   width: 24.0625em;
@@ -283,13 +284,13 @@ select {
   margin: 150px auto;
 }
 .main-section_preface .main-scroll {
-  position: absolute;
   z-index: 10;
   background: url(../images/kv-scroll.png) no-repeat;
   background-size: cover;
   background-position: center;
   width: 660px;
   height: 850px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -427,6 +428,9 @@ select {
   width: 412px;
   height: 280px;
   margin: 32px auto 20px;
+}
+.main-section_card .card-game .card-question_img img.fadeIn {
+  animation: fade-in 1.25s;
 }
 .main-section_card .card-game .card-question_text {
   padding: 8px 0;
@@ -1091,5 +1095,44 @@ select {
 @keyframes float2 {
   0% {
     transform: translateX(20px);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.97);
+  }
+  15% {
+    transform: scale(1.01);
+  }
+  20% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.03);
+  }
+  40% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
   }
 }

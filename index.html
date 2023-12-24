@@ -15,13 +15,15 @@
   <meta property="og:url" content="https://prj.gamer.com.tw/forumandavatar/20y/talent.php">
   <title>巴哈姆特冒險天職測驗</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/aos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="./js/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body data-aos-easing="ease">
   <h1>巴哈姆特冒險天職測驗</h1>
   <div class="visual">
     <div class="section-kv">
@@ -39,7 +41,7 @@
       </div>
       <div class="main-section container">
         <!-- 起始頁 開始 -->
-        <!-- <section class="section-kv_textbox">
+        <section class="section-kv_textbox">
           <div class="main-visual">
             <div class="main-title">
               <div class="main-title_text">
@@ -50,13 +52,13 @@
               </div>
             </div>
             <div class="main-card">
-              <div class="d-card02"><img src="./images/card-left.png" alt=""></div>
-              <div class="d-card01"><img src="./images/main-card.png" alt=""></div>
-              <div class="d-card03"><img src="./images/card-left.png" alt=""></div>
+              <div class="d-card02 aos-init aos-animate"><img src="./images/card-left.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"></div>
+              <div class="d-card01 aos-init aos-animate"><img src="./images/main-card.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"></div>
+              <div class="d-card03 aos-init aos-animate"><img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" src="./images/card-left.png" alt=""></div>
             </div>
             <button class="btn btn-border btn-start main-btn_start">開始測驗</button>
           </div>
-        </section> -->
+        </section>
         <!-- 起始頁 結束 -->
 
         <!-- 準備頁 開始 -->
@@ -92,7 +94,7 @@
         <!-- 查看頁 結束 -->
 
         <!-- 測驗頁 開始 -->
-        <section class="main-section_card">
+        <!-- <section class="main-section_card">
           <div class="card-game">
             <div class="card-schedule">
               <div class="card-schedule_num"><span class="card-schedule_now">01</span>/12</div>
@@ -108,7 +110,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- 測驗頁 結束 -->
 
         <!-- 結果頁 開始 -->
@@ -148,7 +150,15 @@
           $('.main-section_result').hide();
         }
       })
+
+      // $('.answer').click(function (){
+      //   $('.card-question_img > img').addClass('fadeIn');
+      // })
     })
+  </script>
+
+  <script>
+    AOS.init();
   </script>
 
 </body>
