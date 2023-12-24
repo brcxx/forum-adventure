@@ -585,9 +585,6 @@ select {
     line-height: 5.5555555556vw;
     font-size: 2.2222222222vw;
   }
-  .main-section_card {
-    margin-top: 58.3333333333vw;
-  }
   .main-section_card::after {
     display: none;
   }
